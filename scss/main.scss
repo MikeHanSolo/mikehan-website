@@ -1,0 +1,216 @@
+@import "config";
+@import "utilities";
+
+// General styling
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Daikon-Regular", Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+// Main Nav
+#main-nav {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  padding: 1rem 0 1rem 0;
+  width: 100%;
+  text-transform: uppercase;
+  z-index: 10;
+
+  &.scrolled {
+    background-color: $dark-color;
+    transition: background-color 0.2s linear;
+  }
+
+  .logo {
+    padding: 0 1.5rem 0 1.5rem;
+
+    .circle-face {
+      width: 56px;
+      height: 56px;
+      border-radius: 28px;
+      background-color: #fff;
+      background-image: url(../img/mike.png);
+      background-size: 80% 80%;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      -webkit-box-shadow: 2px 2px 5px 0px #202020;
+      -moz-box-shadow: 2px 2px 5px 0px #202020;
+      box-shadow: 2px 2px 5px 0px #202020;
+    }
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    color: set-text-color($dark-color);
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $accent-color;
+    }
+
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+
+// Header
+#header {
+  &-home {
+    background-color: $dark-color;
+    height: 100vh;
+    color: set-text-color($dark-color);
+
+    .header-content {
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      h1 {
+        font-size: 6rem;
+        line-height: 1.2;
+        text-transform: uppercase;
+        font-family: "Daikon-Black";
+        display: inline-block;
+        letter-spacing: 0.1rem;
+
+        span {
+          letter-spacing: 1.1rem;
+          margin-right: -12px;
+        }
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
+
+      a {
+        margin-top: 30%;
+      }
+    }
+  }
+}
+
+#particles-js {
+  height: 100%;
+
+  .arrow {
+    position: absolute;
+    top: 100vh;
+    transform: translateY(-110%);
+    width: 100%;
+    text-align: center;
+    opacity: 0.4;
+  }
+}
+
+// About
+#about {
+  height: 100vh;
+  background-color: $medium-color;
+  color: set-text-color($medium-color);
+
+  .headshot {
+    margin-top: 1.5rem;
+    width: 100%;
+
+    .circle-face {
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+      background-color: #fff;
+      background-image: url(../img/mike.png);
+      background-size: 80% 80%;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      margin: 0 auto;
+    }
+  }
+
+  .section-title {
+    margin-top: 2rem;
+  }
+
+  .specials {
+    margin-top: 3rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+
+    .fas {
+      color: $main-color;
+      padding-bottom: 0.4rem;
+    }
+  }
+
+  .industries {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .fas {
+      color: $dark-color;
+    }
+  }
+}
+
+// Skills
+#skills {
+  height: 100vh;
+  background-color: $main-color;
+  color: $dark-color;
+
+  .container {
+    text-align: center;
+
+    .section-title {
+      margin-top: 10rem;
+    }
+  }
+}
+
+// Experiences
+#experiences {
+  height: 100vh;
+  background-color: $light-color;
+  color: $dark-color;
+
+  .container {
+    text-align: center;
+
+    .section-title {
+      margin-top: 10rem;
+    }
+  }
+}
