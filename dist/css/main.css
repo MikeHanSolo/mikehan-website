@@ -40,6 +40,13 @@
 .my-4 {
   margin: 4rem 0; }
 
+.divider-line {
+  height: 2px;
+  width: 3rem;
+  background-color: #e9c46a;
+  display: block;
+  margin: 1rem auto 1rem auto; }
+
 .btn-main, .btn-light, .btn-dark {
   display: inline-block;
   padding: 0.8rem 2rem;
@@ -171,7 +178,7 @@ img {
     opacity: 0.4; }
 
 #about {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #2a9d8f;
   color: #fff; }
   #about .headshot {
@@ -189,35 +196,62 @@ img {
       margin: 0 auto; }
   #about .section-title {
     margin-top: 2rem; }
+  #about .lead {
+    font-size: 1rem; }
   #about .specials {
     margin-top: 3rem;
     display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(4, 1fr); }
-    #about .specials .fas {
+    grid-gap: 8rem;
+    grid-template-columns: repeat(2, 1fr); }
+    #about .specials .fas,
+    #about .specials .fab {
+      float: left;
+      display: block;
       color: #e9c46a;
-      padding-bottom: 0.4rem; }
-  #about .industries {
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); }
-    #about .industries .fas {
-      color: #264653; }
+      padding-bottom: 0.5rem; }
+    #about .specials .post-content {
+      text-align: left;
+      margin: 0rem 0rem 2rem 3rem; }
+    #about .specials .functions,
+    #about .specials .industries {
+      display: block; }
 
 #skills {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #e9c46a;
   color: #264653; }
   #skills .container {
-    text-align: center; }
-    #skills .container .section-title {
-      margin-top: 10rem; }
+    text-align: center;
+    padding-top: 5rem; }
+    #skills .container .skills-display {
+      width: 100%;
+      margin: 2rem auto 2rem auto; }
+      #skills .container .skills-display li {
+        width: 150px;
+        height: 150px;
+        display: inline-block;
+        overflow: hidden;
+        background-color: #fff;
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 0 0.5rem 0 0.5rem;
+        border: solid 10px #264653;
+        margin-bottom: 0.5rem; }
 
 #experiences {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f4a261;
   color: #264653; }
   #experiences .container {
     text-align: center; }
     #experiences .container .section-title {
+      margin-top: 10rem; }
+
+#contact {
+  min-height: 100vh;
+  background-color: #2a9d8f;
+  color: #fff; }
+  #contact .container {
+    text-align: center; }
+    #contact .container .section-title {
       margin-top: 10rem; }

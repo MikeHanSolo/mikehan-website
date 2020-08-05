@@ -43,6 +43,14 @@
   }
 }
 
+.divider-line {
+  height: 2px;
+  width: 3rem;
+  background-color: $main-color;
+  display: block;
+  margin: 1rem auto 1rem auto;
+}
+
 // Buttons
 %btn-shared {
   display: inline-block;

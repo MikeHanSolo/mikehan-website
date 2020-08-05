@@ -137,7 +137,7 @@ img {
 
 // About
 #about {
-  height: 100vh;
+  min-height: 100vh;
   background-color: $medium-color;
   color: set-text-color($medium-color);
 
@@ -162,33 +162,73 @@ img {
     margin-top: 2rem;
   }
 
+  .lead {
+    font-size: 1rem;
+  }
+
   .specials {
     margin-top: 3rem;
     display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8rem;
+    grid-template-columns: repeat(2, 1fr);
 
-    .fas {
+    .fas,
+    .fab {
+      float: left;
+      display: block;
       color: $main-color;
-      padding-bottom: 0.4rem;
+      padding-bottom: 0.5rem;
     }
-  }
 
-  .industries {
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    .post-content {
+      text-align: left;
+      margin: 0rem 0rem 2rem 3rem;
+    }
 
-    .fas {
-      color: $dark-color;
+    .functions,
+    .industries {
+      display: block;
     }
   }
 }
 
 // Skills
 #skills {
-  height: 100vh;
+  min-height: 100vh;
   background-color: $main-color;
+  color: $dark-color;
+
+  .container {
+    text-align: center;
+    padding-top: 5rem;
+
+    .section-title {
+    }
+
+    .skills-display {
+      width: 100%;
+      margin: 2rem auto 2rem auto;
+
+      li {
+        width: 150px;
+        height: 150px;
+        display: inline-block;
+        overflow: hidden;
+        background-color: #fff;
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 0 0.5rem 0 0.5rem;
+        border: solid 10px $dark-color;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+// Experiences
+#experiences {
+  min-height: 100vh;
+  background-color: $light-color;
   color: $dark-color;
 
   .container {
@@ -200,11 +240,11 @@ img {
   }
 }
 
-// Experiences
-#experiences {
-  height: 100vh;
-  background-color: $light-color;
-  color: $dark-color;
+// Contact
+#contact {
+  min-height: 100vh;
+  background-color: $medium-color;
+  color: #fff;
 
   .container {
     text-align: center;
