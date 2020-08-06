@@ -97,6 +97,11 @@ a {
   text-decoration: none;
   color: #264653; }
 
+h1,
+h2 {
+  text-transform: uppercase;
+  font-family: "Daikon-Black"; }
+
 ul {
   list-style: none; }
 
@@ -180,7 +185,9 @@ img {
 #about {
   min-height: 100vh;
   background-color: #2a9d8f;
-  color: #fff; }
+  color: #fff;
+  display: flex;
+  vertical-align: center; }
   #about .headshot {
     margin-top: 1.5rem;
     width: 100%; }
@@ -193,7 +200,7 @@ img {
       background-size: 80% 80%;
       background-position: 50%;
       background-repeat: no-repeat;
-      margin: 0 auto; }
+      margin: auto; }
   #about .section-title {
     margin-top: 2rem; }
   #about .lead {
@@ -209,7 +216,7 @@ img {
       display: block;
       color: #e9c46a;
       padding-bottom: 0.5rem; }
-    #about .specials .post-content {
+    #about .specials .special-content {
       text-align: left;
       margin: 0rem 0rem 2rem 3rem; }
     #about .specials .functions,
@@ -219,14 +226,16 @@ img {
 #skills {
   min-height: 100vh;
   background-color: #e9c46a;
-  color: #264653; }
+  color: #264653;
+  display: flex;
+  vertical-align: center; }
   #skills .container {
     text-align: center;
     padding-top: 5rem; }
-    #skills .container .skills-display {
+    #skills .container .skills-list {
       max-width: 750px;
       margin: 2rem auto 3rem auto; }
-      #skills .container .skills-display li {
+      #skills .container .skills-list li {
         width: 150px;
         height: 150px;
         display: inline-block;
@@ -235,22 +244,42 @@ img {
         margin: 0 0.5rem 1rem 0.5rem;
         border: solid 7px #264653;
         line-height: 150px; }
-        #skills .container .skills-display li img {
+        #skills .container .skills-list li img {
           vertical-align: middle;
           width: auto;
           height: 120px; }
-          #skills .container .skills-display li img.land {
+          #skills .container .skills-list li img.land {
             width: 120px;
             height: auto; }
 
 #experiences {
   min-height: 100vh;
   background-color: #f4a261;
-  color: #264653; }
+  color: #264653;
+  display: flex;
+  vertical-align: center; }
   #experiences .container {
     text-align: center; }
-    #experiences .container .section-title {
-      margin-top: 10rem; }
+    #experiences .container .experiences-list .experience {
+      display: block; }
+      #experiences .container .experiences-list .experience img {
+        float: left;
+        display: block;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        background-color: #fff;
+        margin: 1rem 1.5rem 1rem 1rem;
+        border: solid 7px #264653;
+        line-height: 150px; }
+      #experiences .container .experiences-list .experience .experience-content {
+        text-align: left;
+        margin: 3rem 0rem 0rem 0rem; }
+        #experiences .container .experiences-list .experience .experience-content h3 {
+          padding-top: 0.5rem;
+          font-family: "Daikon-Black"; }
+        #experiences .container .experiences-list .experience .experience-content p {
+          margin: 0; }
 
 #contact {
   min-height: 100vh;
