@@ -202,12 +202,9 @@ img {
     text-align: center;
     padding-top: 5rem;
 
-    .section-title {
-    }
-
     .skills-display {
-      width: 100%;
-      margin: 2rem auto 2rem auto;
+      max-width: 750px;
+      margin: 2rem auto 3rem auto;
 
       li {
         width: 150px;
@@ -215,11 +212,20 @@ img {
         display: inline-block;
         overflow: hidden;
         background-color: #fff;
-        padding: 10px;
-        box-sizing: border-box;
-        margin: 0 0.5rem 0 0.5rem;
-        border: solid 10px $dark-color;
-        margin-bottom: 0.5rem;
+        margin: 0 0.5rem 1rem 0.5rem;
+        border: solid 7px $dark-color;
+        line-height: 150px;
+
+        img {
+          vertical-align: middle;
+          width: auto;
+          height: 120px;
+
+          &.land {
+            width: 120px;
+            height: auto;
+          }
+        }
       }
     }
   }

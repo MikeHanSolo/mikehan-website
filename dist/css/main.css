@@ -224,19 +224,24 @@ img {
     text-align: center;
     padding-top: 5rem; }
     #skills .container .skills-display {
-      width: 100%;
-      margin: 2rem auto 2rem auto; }
+      max-width: 750px;
+      margin: 2rem auto 3rem auto; }
       #skills .container .skills-display li {
         width: 150px;
         height: 150px;
         display: inline-block;
         overflow: hidden;
         background-color: #fff;
-        padding: 10px;
-        box-sizing: border-box;
-        margin: 0 0.5rem 0 0.5rem;
-        border: solid 10px #264653;
-        margin-bottom: 0.5rem; }
+        margin: 0 0.5rem 1rem 0.5rem;
+        border: solid 7px #264653;
+        line-height: 150px; }
+        #skills .container .skills-display li img {
+          vertical-align: middle;
+          width: auto;
+          height: 120px; }
+          #skills .container .skills-display li img.land {
+            width: 120px;
+            height: auto; }
 
 #experiences {
   min-height: 100vh;
