@@ -269,7 +269,7 @@ img {
         height: 150px;
         overflow: hidden;
         background-color: #fff;
-        margin: 1rem 1.5rem 1rem 1rem;
+        margin: 1rem 1.5rem 0rem 1rem;
         border: solid 7px #264653;
         line-height: 150px; }
       #experiences .container .experiences-list .experience .experience-content {
