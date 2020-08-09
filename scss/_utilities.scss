@@ -48,7 +48,7 @@
   width: 3rem;
   background-color: $main-color;
   display: block;
-  margin: 1rem auto 1rem auto;
+  margin: 0.5rem auto 1.25rem auto;
 }
 
 // Buttons
@@ -58,6 +58,7 @@
   transition: all 0.5s;
   border: none;
   cursor: pointer;
+  font-size: 1rem;
   border-radius: 40px;
 }
 

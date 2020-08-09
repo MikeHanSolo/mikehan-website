@@ -254,31 +254,24 @@ img {
 
     .experiences-list {
       .experience {
-        display: block;
-
         img {
           float: left;
-          display: block;
           width: 150px;
           height: 150px;
-          overflow: hidden;
           background-color: #fff;
-          margin: 1rem 1.5rem 0rem 1rem;
+          margin: 1rem 1.5rem 1rem 1rem;
           border: solid 7px $dark-color;
           line-height: 150px;
         }
 
         .experience-content {
           text-align: left;
-          margin: 3rem 0rem 0rem 0rem;
+          margin-top: 3rem;
+          overflow: hidden;
 
           h3 {
             padding-top: 0.5rem;
             font-family: "Daikon-Black";
-          }
-
-          p {
-            margin: 0;
           }
         }
       }
@@ -290,13 +283,75 @@ img {
 #contact {
   min-height: 100vh;
   background-color: $medium-color;
-  color: #fff;
+  color: set-text-color($medium-color);
+  display: flex;
+  vertical-align: center;
+  text-align: center;
 
-  .container {
-    text-align: center;
+  .section-title {
+    margin-top: 10rem;
+  }
 
-    .section-title {
-      margin-top: 10rem;
+  .divider-line {
+    margin-bottom: 3rem;
+  }
+
+  button[type="submit"] {
+    width: 33%;
+    margin-top: 1.5rem;
+  }
+
+  input,
+  textarea {
+    border-radius: 5px;
+    border: 1px $dark-color solid;
+    font-family: "Daikon-Regular";
+
+    &:focus {
+      outline: none;
     }
+  }
+
+  .text-fields {
+    display: grid;
+    grid-template-areas:
+      "name email"
+      "subject subject"
+      "message message";
+    grid-gap: 1.2rem;
+    margin-bottom: 1.2rem;
+
+    .name-input {
+      grid-area: name;
+    }
+    .email-input {
+      grid-area: email;
+    }
+    .subject-input {
+      grid-area: subject;
+    }
+    .message-input {
+      grid-area: message;
+      height: 200px;
+    }
+
+    .text-input {
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
+// Footer
+#main-footer {
+  min-height: 6rem;
+  display: flex;
+  vertical-align: center;
+  text-align: center;
+  background-color: $dark-color;
+  color: set-text-color($dark-color);
+
+  .fab {
+    color: set-text-color($dark-color);
+    margin-top: 0.5rem;
   }
 }

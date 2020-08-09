@@ -45,7 +45,7 @@
   width: 3rem;
   background-color: #e9c46a;
   display: block;
-  margin: 1rem auto 1rem auto; }
+  margin: 0.5rem auto 1.25rem auto; }
 
 .btn-main, .btn-light, .btn-dark {
   display: inline-block;
@@ -53,6 +53,7 @@
   transition: all 0.5s;
   border: none;
   cursor: pointer;
+  font-size: 1rem;
   border-radius: 40px; }
 
 .btn-main {
@@ -260,32 +261,68 @@ img {
   vertical-align: center; }
   #experiences .container {
     text-align: center; }
-    #experiences .container .experiences-list .experience {
-      display: block; }
-      #experiences .container .experiences-list .experience img {
-        float: left;
-        display: block;
-        width: 150px;
-        height: 150px;
-        overflow: hidden;
-        background-color: #fff;
-        margin: 1rem 1.5rem 0rem 1rem;
-        border: solid 7px #264653;
-        line-height: 150px; }
-      #experiences .container .experiences-list .experience .experience-content {
-        text-align: left;
-        margin: 3rem 0rem 0rem 0rem; }
-        #experiences .container .experiences-list .experience .experience-content h3 {
-          padding-top: 0.5rem;
-          font-family: "Daikon-Black"; }
-        #experiences .container .experiences-list .experience .experience-content p {
-          margin: 0; }
+    #experiences .container .experiences-list .experience img {
+      float: left;
+      width: 150px;
+      height: 150px;
+      background-color: #fff;
+      margin: 1rem 1.5rem 1rem 1rem;
+      border: solid 7px #264653;
+      line-height: 150px; }
+    #experiences .container .experiences-list .experience .experience-content {
+      text-align: left;
+      margin-top: 3rem;
+      overflow: hidden; }
+      #experiences .container .experiences-list .experience .experience-content h3 {
+        padding-top: 0.5rem;
+        font-family: "Daikon-Black"; }
 
 #contact {
   min-height: 100vh;
   background-color: #2a9d8f;
+  color: #fff;
+  display: flex;
+  vertical-align: center;
+  text-align: center; }
+  #contact .section-title {
+    margin-top: 10rem; }
+  #contact .divider-line {
+    margin-bottom: 3rem; }
+  #contact button[type="submit"] {
+    width: 33%;
+    margin-top: 1.5rem; }
+  #contact input,
+  #contact textarea {
+    border-radius: 5px;
+    border: 1px #264653 solid;
+    font-family: "Daikon-Regular"; }
+    #contact input:focus,
+    #contact textarea:focus {
+      outline: none; }
+  #contact .text-fields {
+    display: grid;
+    grid-template-areas: "name email" "subject subject" "message message";
+    grid-gap: 1.2rem;
+    margin-bottom: 1.2rem; }
+    #contact .text-fields .name-input {
+      grid-area: name; }
+    #contact .text-fields .email-input {
+      grid-area: email; }
+    #contact .text-fields .subject-input {
+      grid-area: subject; }
+    #contact .text-fields .message-input {
+      grid-area: message;
+      height: 200px; }
+    #contact .text-fields .text-input {
+      padding: 0.5rem 1rem; }
+
+#main-footer {
+  min-height: 6rem;
+  display: flex;
+  vertical-align: center;
+  text-align: center;
+  background-color: #264653;
   color: #fff; }
-  #contact .container {
-    text-align: center; }
-    #contact .container .section-title {
-      margin-top: 10rem; }
+  #main-footer .fab {
+    color: #fff;
+    margin-top: 0.5rem; }

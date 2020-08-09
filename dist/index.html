@@ -15,21 +15,21 @@
     <title>Mike Han | Product Manager</title>
   </head>
   <body>
-    <!-- Header -->
-    <header id="header-home">
+    <nav id="main-nav">
+      <div class="logo"><div class="circle-face"></div></div>
+      <ul>
+        <li><a href="#header-home" class="current">Intro</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experiences">Experience</a></li>
+      </ul>
+      <ul>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Intro -->
+    <section id="header-home">
       <div id="particles-js">
-        <nav id="main-nav">
-          <div class="logo"><div class="circle-face"></div></div>
-          <ul>
-            <li><a href="index.html" class="current">Intro</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experiences">Experience</a></li>
-          </ul>
-          <ul>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
         <div class="container">
           <div class="header-content">
             <h1>Hi, I'm<br /><span>Mike</span></h1>
@@ -48,7 +48,7 @@
           <i class="fas fa-angle-double-down fa-3x bounce"></i>
         </div>
       </div>
-    </header>
+    </section>
 
     <!-- About -->
     <section id="about" class="text-center py-2">
@@ -67,6 +67,8 @@
         </p>
         <div class="specials">
           <div class="functions">
+            <h2>Functional</h2>
+            <div class="divider-line"></div>
             <div class="functional-area">
               <i class="fas fa-route fa-2x"></i>
               <div class="special-content">
@@ -110,6 +112,8 @@
             </div>
           </div>
           <div class="industries">
+            <h2>Industry</h2>
+            <div class="divider-line"></div>
             <div class="industry">
               <i class="fas fa-piggy-bank fa-2x"></i>
               <div class="special-content">
@@ -227,8 +231,8 @@
               </p>
               <p>
                 Product manager for the Data Platform working closely with our
-                Data Engineering team. Ensured the successful data integration
-                of Avant with its new bank partnerships.
+                Data Engineering team. Ensured the successful data onboarding of
+                Avant with its new bank partnerships.
               </p>
             </div>
           </div>
@@ -255,7 +259,7 @@
             <div class="experience-content">
               <h3>Northwestern University</h3>
               <h4>B.A. Economics | 2011 - 2015 | Evanston, IL</h4>
-              <p>Student Group Activities:</p>
+              <p>Affiliations:</p>
               <ul>
                 <li>
                   - Institute for Student Business Education (ISBE) Director
@@ -272,16 +276,75 @@
     <section id="contact">
       <div class="container">
         <h2 class="section-title">
-          Please reach out. I would love to hear from you!
+          Reach out. I would love to hear from you!
         </h2>
-        <div class="experience"></div>
+        <div class="divider-line"></div>
+        <form>
+          <div class="text-fields">
+            <input
+              type="text"
+              class="text-input name-input"
+              placeholder="Name"
+            />
+            <input
+              type="text"
+              class="text-input subject-input"
+              placeholder="Subject"
+            />
+            <input
+              type="email"
+              class="text-input email-input"
+              placeholder="Email"
+            />
+            <textarea
+              class="text-input message-input"
+              placeholder="Message"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-main">Say Hello</button>
+        </form>
       </div>
     </section>
 
+    <footer id="main-footer">
+      <div class="footer-content container">
+        <p>
+          Copyright &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          All Rights Reserved
+        </p>
+        <div class="social">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/mike_han_solo"
+          >
+            <i class="fab fa-twitter-square fa-2x"></i>
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/mikeqhan/"
+          >
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/MikeHanSolo"
+          >
+            <i class="fab fa-github-square fa-2x"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
     <!-- JavaScript and jQuery -->
     <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.js"
-      integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
     <script src="js/script.js"></script>
