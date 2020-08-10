@@ -35,11 +35,6 @@ $(document).ready(function () {
     });
   }
 
-  // Remove contact form submit disabled if CAPTCHA completed
-  function enableSubmitBtn() {
-    document.getElementById("contact-submit").disabled = false;
-  }
-
   $(document).scroll(function () {
     // Vertical position of scrollbar
     var scrollPos = $(window).scrollTop();
@@ -64,3 +59,8 @@ $(document).ready(function () {
     );
   });
 });
+
+// Remove contact form submit disabled if CAPTCHA completed
+function enableSubmitBtn() {
+  document.getElementById("contact-submit").disabled = false;
+}
