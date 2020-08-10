@@ -55,6 +55,12 @@
   cursor: pointer;
   font-size: 1rem;
   border-radius: 40px; }
+  .btn-main:focus, .btn-light:focus, .btn-dark:focus {
+    outline: none;
+    box-shadow: none; }
+  .btn-main:disabled, .btn-light:disabled, .btn-dark:disabled {
+    background-color: #8d99ae;
+    pointer-events: none; }
 
 .btn-main {
   color: #181a45;
@@ -284,13 +290,19 @@ img {
   display: flex;
   vertical-align: center;
   text-align: center; }
+  #contact .container {
+    max-width: 700px; }
+  #contact .contact-summary {
+    margin-bottom: 1.5rem; }
   #contact .section-title {
     margin-top: 10rem; }
-  #contact .divider-line {
-    margin-bottom: 3rem; }
+  #contact .g-recaptcha {
+    display: inline-block; }
   #contact button[type="submit"] {
-    width: 33%;
-    margin-top: 1.5rem; }
+    width: 25%;
+    margin-top: 1.5rem;
+    display: block;
+    margin: 1.5rem auto 0 auto; }
   #contact input,
   #contact textarea {
     border-radius: 5px;

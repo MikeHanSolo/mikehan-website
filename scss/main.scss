@@ -288,17 +288,27 @@ img {
   vertical-align: center;
   text-align: center;
 
+  .container {
+    max-width: 700px;
+  }
+
+  .contact-summary {
+    margin-bottom: 1.5rem;
+  }
+
   .section-title {
     margin-top: 10rem;
   }
 
-  .divider-line {
-    margin-bottom: 3rem;
+  .g-recaptcha {
+    display: inline-block;
   }
 
   button[type="submit"] {
-    width: 33%;
+    width: 25%;
     margin-top: 1.5rem;
+    display: block;
+    margin: 1.5rem auto 0 auto;
   }
 
   input,

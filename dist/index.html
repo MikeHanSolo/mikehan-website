@@ -276,32 +276,66 @@
     <section id="contact">
       <div class="container">
         <h2 class="section-title">
-          Reach out. I would love to hear from you!
+          Reach out. Say Hi.
         </h2>
         <div class="divider-line"></div>
-        <form>
+        <p class="contact-summary">
+          Want to collaborate on a project? Interested in a detailed resume?
+          Just want to chat the latest in tech and startups? Find me on
+          <a href="https://www.linkedin.com/in/mikeqhan/">LinkedIn</a>,
+          <a href="https://twitter.com/mike_han_solo">Twitter</a>, or shoot me
+          an email at
+          <span>
+            <script type="text/javascript">
+              emailE = "mikehan.io";
+
+              emailE = "hey" + "@" + emailE;
+
+              document.write(
+                '<A href="mailto:' + emailE + '">' + emailE + "</a>."
+              );
+            </script> </span
+          >I would love to hear from you.
+        </p>
+        <form action="scripts/contactform.php" method="post">
           <div class="text-fields">
             <input
               type="text"
               class="text-input name-input"
+              name="name"
               placeholder="Name"
-            />
-            <input
-              type="text"
-              class="text-input subject-input"
-              placeholder="Subject"
             />
             <input
               type="email"
               class="text-input email-input"
+              name="email"
               placeholder="Email"
+            />
+            <input
+              type="text"
+              class="text-input subject-input"
+              name="subject"
+              placeholder="Subject"
             />
             <textarea
               class="text-input message-input"
+              name="message"
               placeholder="Message"
             ></textarea>
           </div>
-          <button type="submit" class="btn-main">Say Hello</button>
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LeEcbwZAAAAABxWpuVKBPapeK1g1mZDOGtHh8yR"
+            data-callback="enableSubmitBtn"
+          ></div>
+          <button
+            type="submit"
+            id="contact-submit"
+            class="btn-main"
+            disabled="disabled"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </section>
@@ -347,10 +381,10 @@
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
-    <script src="js/script.js"></script>
-    <script src="js/typewriter.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/typewriter.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
       particlesJS.load(
         "particles-js",
