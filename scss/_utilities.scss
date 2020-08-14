@@ -1,46 +1,8 @@
 .container {
   max-width: $content-width;
-  padding: 0 1.5rem;
+  padding: 6rem 1.5rem;
   margin: auto;
   overflow: hidden;
-}
-
-// Padding
-.py {
-  &-1 {
-    padding: 1rem 0;
-  }
-
-  &-2 {
-    padding: 2rem 0;
-  }
-
-  &-3 {
-    padding: 3rem 0;
-  }
-
-  &-4 {
-    padding: 4rem 0;
-  }
-}
-
-// Margin
-.my {
-  &-1 {
-    margin: 1rem 0;
-  }
-
-  &-2 {
-    margin: 2rem 0;
-  }
-
-  &-3 {
-    margin: 3rem 0;
-  }
-
-  &-4 {
-    margin: 4rem 0;
-  }
 }
 
 .divider-line {

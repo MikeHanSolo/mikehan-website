@@ -150,7 +150,6 @@ img {
   vertical-align: center;
 
   .headshot {
-    margin-top: 1.5rem;
     width: 100%;
 
     .circle-face {
@@ -296,19 +295,17 @@ img {
     margin-bottom: 1.5rem;
   }
 
-  .section-title {
-    margin-top: 10rem;
-  }
-
   .g-recaptcha {
     display: inline-block;
   }
 
-  button[type="submit"] {
+  #btn-contact-submit {
     width: 25%;
     margin-top: 1.5rem;
     display: block;
     margin: 1.5rem auto 0 auto;
+    border: none;
+    border-radius: 40px;
   }
 
   input,
@@ -353,15 +350,23 @@ img {
 
 // Footer
 #main-footer {
-  min-height: 6rem;
+  height: 8rem;
+  background-color: $dark-color;
   display: flex;
   vertical-align: center;
-  text-align: center;
-  background-color: $dark-color;
-  color: set-text-color($dark-color);
 
-  .fab {
+  .footer-content {
+    margin: auto;
     color: set-text-color($dark-color);
-    margin-top: 0.5rem;
+
+    .social {
+      margin-top: 0.5rem;
+      line-height: 2rem;
+      text-align: center;
+
+      .fab {
+        color: set-text-color($dark-color);
+      }
+    }
   }
 }
