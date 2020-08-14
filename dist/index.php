@@ -29,19 +29,17 @@
   <!-- Intro -->
   <section id="header-home">
     <div id="particles-js">
-      <div class="container">
-        <div class="header-content">
-          <h1>Hi, I'm<br /><span>Mike</span></h1>
-          <p>
-            I am a
-            <span class="txt-type" data-wait="3000" data-words='["Product Manager..", "Data Scientist..", "Developer..", "proud Chicagoan..", "Northwestern Wildcat.."]'></span>
-          </p>
-          <a href="#experiences" class="btn-main">Jump To Experience</a>
-        </div>
+      <div class="header-content">
+        <h1>Hi, I'm<br /><span>Mike</span></h1>
+        <p>
+          I am a
+          <span class="txt-type" data-wait="3000" data-words='["Product Manager..", "Data Scientist..", "Developer..", "proud Chicagoan..", "Northwestern Wildcat.."]'></span>
+        </p>
+        <a href="#experiences" class="btn-main">Jump To Experience</a>
       </div>
-      <div class="arrow">
-        <i class="fas fa-angle-double-down fa-3x bounce"></i>
-      </div>
+    </div>
+    <div class="arrow">
+      <i class="fas fa-angle-double-down fa-3x bounce"></i>
     </div>
   </section>
 

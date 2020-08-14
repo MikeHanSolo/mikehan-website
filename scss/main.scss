@@ -130,15 +130,14 @@ img {
 
 #particles-js {
   height: 100%;
+}
 
-  .arrow {
-    position: absolute;
-    top: 100vh;
-    transform: translateY(-110%);
-    width: 100%;
-    text-align: center;
-    opacity: 0.4;
-  }
+.arrow {
+  position: absolute;
+  top: 100vh;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  opacity: 0.4;
 }
 
 // About
