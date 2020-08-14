@@ -1,0 +1,6 @@
+#!/bin/sh
+git --work-tree=/var/www/html --git-dir=/var/www/repo.git checkout -f -- dist/
+cd /var/www/html
+cp -r dist/* .
+rmdir dist
+echo "Prod version updated."
