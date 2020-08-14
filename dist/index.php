@@ -38,7 +38,7 @@
         <a href="#experiences" class="btn-main">Jump To Experience</a>
       </div>
     </div>
-    <div class="arrow">
+    <div class="scroll-arrow">
       <i class="fas fa-angle-double-down fa-3x bounce"></i>
     </div>
   </section>

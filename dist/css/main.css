@@ -158,7 +158,7 @@ img {
 #particles-js {
   height: 100%; }
 
-.arrow {
+.scroll-arrow {
   position: absolute;
   top: 100vh;
   left: 50%;
