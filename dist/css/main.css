@@ -169,8 +169,7 @@ img {
         position: relative; }
         #header-home #particles-js #scroll-indicator .arrows i {
           position: absolute;
-          animation: fall-fade 1.5s linear infinite;
-          font-size: 42px; }
+          animation: fall-fade 1.5s linear infinite; }
           #header-home #particles-js #scroll-indicator .arrows i:nth-child(1) {
             transform: translate(-50%, -8px);
             animation-delay: 0.4s; }
