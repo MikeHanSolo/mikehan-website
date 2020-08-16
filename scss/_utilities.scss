@@ -13,6 +13,15 @@
   margin: 0.5rem auto 1.25rem auto;
 }
 
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
 // Buttons
 %btn-shared {
   display: inline-block;
@@ -60,18 +69,13 @@ input[class^="btn-"]:hover {
   background-color: $accent-color;
 }
 
-.lead {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-// Animations
-.bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
+// Icons
+.lar,
+.las,
+.lab {
+  float: left;
+  display: block;
+  color: $main-color;
+  padding-bottom: 0.5rem;
+  font-size: 38px;
 }

@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/MyFontsWebfontsKit.css" />
   <link rel="stylesheet" href="css/main.css" />
   <title>Mike Han | Product Manager</title>
@@ -37,9 +37,12 @@
         </p>
         <a href="#experiences" class="btn-main">Jump To Experience</a>
       </div>
-    </div>
-    <div class="scroll-arrow">
-      <i class="fas fa-angle-double-down fa-3x bounce"></i>
+      <div id="scroll-indicator">
+        <div class="arrows">
+          <i class="las la-angle-down"></i>
+          <i class="las la-angle-down"></i>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -65,7 +68,7 @@
           <h2>Functional</h2>
           <div class="divider-line"></div>
           <div class="functional-area">
-            <i class="fas fa-route fa-2x"></i>
+            <i class="las la-directions"></i>
             <div class="special-content">
               <h3>Product Strategy</h3>
               <p>
@@ -76,7 +79,7 @@
             </div>
           </div>
           <div class="functional-area">
-            <i class="fas fa-wrench fa-2x"></i>
+            <i class="las la-wrench"></i>
             <div class="special-content">
               <h3>Product Development</h3>
               <p>
@@ -86,7 +89,7 @@
             </div>
           </div>
           <div class="functional-area">
-            <i class="fas fa-chart-bar fa-2x"></i>
+            <i class="las la-chart-bar"></i>
             <div class="special-content">
               <h3>Advanced Analytics & BI</h3>
               <p>
@@ -97,7 +100,7 @@
             </div>
           </div>
           <div class="functional-area">
-            <i class="fab fa-connectdevelop fa-2x"></i>
+            <i class="lab la-connectdevelop"></i>
             <div class="special-content">
               <h3>Data Engineering</h3>
               <p>
@@ -110,7 +113,7 @@
           <h2>Industry</h2>
           <div class="divider-line"></div>
           <div class="industry">
-            <i class="fas fa-piggy-bank fa-2x"></i>
+            <i class="las la-piggy-bank"></i>
             <div class="special-content">
               <h3>Financial Services</h3>
               <p>
@@ -122,7 +125,7 @@
             </div>
           </div>
           <div class="industry">
-            <i class="fas fa-user-shield fa-2x"></i>
+            <i class="las la-user-shield"></i>
             <div class="special-content">
               <h3>Insurance</h3>
               <p>
@@ -133,7 +136,7 @@
             </div>
           </div>
           <div class="industry">
-            <i class="fas fa-stethoscope fa-2x"></i>
+            <i class="las la-stethoscope"></i>
             <div class="special-content">
               <h3>Healthcare</h3>
               <p>
@@ -282,12 +285,12 @@
         an email at
         <span>
           <script type="text/javascript">
-            emailE = "mikehan.io";
+            domain = "mikehan.io";
 
-            emailE = "hey" + "@" + emailE;
+            addr = "hey" + "@" + domain;
 
             document.write(
-              '<A href="mailto:' + emailE + '">' + emailE + "</a>."
+              '<A href="mailto:' + addr + '">' + addr + "</a>."
             );
           </script>
         </span>I would love to hear from you.
@@ -316,13 +319,13 @@
       </p>
       <div class="social">
         <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/mike_han_solo">
-          <i class="fab fa-twitter-square fa-2x"></i>
+          <i class="lab la-twitter-square"></i>
         </a>
         <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mikeqhan/">
-          <i class="fab fa-linkedin fa-2x"></i>
+          <i class="lab la-linkedin"></i>
         </a>
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/MikeHanSolo">
-          <i class="fab fa-github-square fa-2x"></i>
+          <i class="lab la-github-square"></i>
         </a>
       </div>
     </div>

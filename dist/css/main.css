@@ -1,14 +1,13 @@
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
+@keyframes fall-fade {
+  0% {
+    top: 0rem;
+    opacity: 0; }
+  25% {
+    top: 2rem;
+    opacity: 1; }
   100% {
-    transform: translateY(0); }
-  40% {
-    transform: translateY(-20px); }
-  60% {
-    transform: translateY(-10px); } }
+    top: 4rem;
+    opacity: 0; } }
 
 .container {
   max-width: 1280px;
@@ -22,6 +21,13 @@
   background-color: #e9c46a;
   display: block;
   margin: 0.5rem auto 1.25rem auto; }
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem; }
+
+.text-center {
+  text-align: center; }
 
 .btn-main, .btn-light, .btn-dark {
   display: inline-block;
@@ -55,17 +61,14 @@ a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
   background-color: #e76f51; }
 
-.lead {
-  font-size: 1.3rem;
-  margin-bottom: 2rem; }
-
-.text-center {
-  text-align: center; }
-
-.bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite; }
+.lar,
+.las,
+.lab {
+  float: left;
+  display: block;
+  color: #e9c46a;
+  padding-bottom: 0.5rem;
+  font-size: 38px; }
 
 * {
   margin: 0;
@@ -134,36 +137,46 @@ img {
   background-color: #264653;
   height: 100vh;
   color: #fff; }
-  #header-home .header-content {
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-    #header-home .header-content h1 {
-      font-size: 6rem;
-      line-height: 1.2;
-      text-transform: uppercase;
-      font-family: "Daikon-Black";
-      display: inline-block;
-      letter-spacing: 0.1rem; }
-      #header-home .header-content h1 span {
-        letter-spacing: 1.1rem;
-        margin-right: -12px; }
-    #header-home .header-content p {
-      font-size: 1.25rem; }
-    #header-home .header-content a {
-      margin-top: 30%; }
-
-#particles-js {
-  height: 100%; }
-
-.scroll-arrow {
-  position: absolute;
-  top: 100vh;
-  left: 50%;
-  transform: translate(-50%, -100%);
-  opacity: 0.4; }
+  #header-home #particles-js {
+    height: 100%;
+    position: relative; }
+    #header-home #particles-js .header-content {
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      #header-home #particles-js .header-content h1 {
+        font-size: 6rem;
+        line-height: 1.2;
+        text-transform: uppercase;
+        font-family: "Daikon-Black";
+        display: inline-block;
+        letter-spacing: 0.1rem; }
+        #header-home #particles-js .header-content h1 span {
+          letter-spacing: 1.1rem;
+          margin-right: -12px; }
+      #header-home #particles-js .header-content p {
+        font-size: 1.25rem; }
+      #header-home #particles-js .header-content a {
+        margin-top: 30%; }
+    #header-home #particles-js #scroll-indicator {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -9vh); }
+      #header-home #particles-js #scroll-indicator .arrows {
+        position: relative; }
+        #header-home #particles-js #scroll-indicator .arrows i {
+          position: absolute;
+          animation: fall-fade 1.5s linear infinite;
+          font-size: 42px; }
+          #header-home #particles-js #scroll-indicator .arrows i:nth-child(1) {
+            transform: translate(-50%, -8px);
+            animation-delay: 0.4s; }
+          #header-home #particles-js #scroll-indicator .arrows i:nth-child(2) {
+            transform: translate(-50%, 0px);
+            animation-delay: 0.1s; }
 
 #about {
   min-height: 100vh;
@@ -192,12 +205,6 @@ img {
     display: grid;
     grid-gap: 8rem;
     grid-template-columns: repeat(2, 1fr); }
-    #about .specials .fas,
-    #about .specials .fab {
-      float: left;
-      display: block;
-      color: #e9c46a;
-      padding-bottom: 0.5rem; }
     #about .specials .special-content {
       text-align: left;
       margin: 0rem 0rem 2rem 3rem; }
@@ -310,10 +317,13 @@ img {
   vertical-align: center; }
   #main-footer .footer-content {
     margin: auto;
-    color: #fff; }
+    color: #fff;
+    text-align: center;
+    height: 4rem; }
+    #main-footer .footer-content p {
+      line-height: 2rem; }
     #main-footer .footer-content .social {
-      margin-top: 0.5rem;
-      line-height: 2rem;
-      text-align: center; }
-      #main-footer .footer-content .social .fab {
-        color: #fff; }
+      display: inline-block; }
+      #main-footer .footer-content .social .lab {
+        color: #fff;
+        padding: 0; }
