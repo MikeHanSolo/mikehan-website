@@ -50,7 +50,7 @@ img {
   .logo {
     padding: 0 1.5rem 0 1.5rem;
 
-    .circle-face {
+    .circle-headshot {
       width: 56px;
       height: 56px;
       border-radius: 28px;
@@ -90,67 +90,72 @@ img {
 }
 
 // Header
-#header-home {
-  background-color: $dark-color;
-  height: 100vh;
-  color: set-text-color($dark-color);
 
-  #particles-js {
-    height: 100%;
-    position: relative;
+#header {
+  &-home {
+    height: 100vh;
+    width: 100%;
+    color: set-text-color($dark-color);
+    background-color: $dark-color;
+  }
 
-    .header-content {
-      position: absolute;
-      text-align: center;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+  &-content {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-      h1 {
-        font-size: 6rem;
-        line-height: 1.2;
-        text-transform: uppercase;
-        font-family: "Daikon-Black";
-        display: inline-block;
-        letter-spacing: 0.1rem;
+    h1 {
+      font-size: 6rem;
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-family: "Daikon-Black";
+      display: inline-block;
+      letter-spacing: 0.1rem;
 
-        span {
-          letter-spacing: 1.1rem;
-          margin-right: -12px;
-        }
-      }
-
-      p {
-        font-size: 1.25rem;
-      }
-
-      a {
-        margin-top: 30%;
+      span {
+        letter-spacing: 1.1rem;
+        margin-right: -12px;
       }
     }
 
-    #scroll-indicator {
+    p {
+      font-size: 1.25rem;
+    }
+
+    a {
+      margin-top: 30%;
+    }
+  }
+}
+
+#particles-js {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#scroll-indicator {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -7rem);
+
+  .arrows {
+    position: relative;
+
+    i {
       position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translate(-50%, -9vh);
+      animation: fall-fade 1.5s linear infinite;
 
-      .arrows {
-        position: relative;
-
-        i {
-          position: absolute;
-          animation: fall-fade 1.5s linear infinite;
-
-          &:nth-child(1) {
-            transform: translate(-50%, -8px);
-            animation-delay: 0.4s;
-          }
-          &:nth-child(2) {
-            transform: translate(-50%, 0px);
-            animation-delay: 0.1s;
-          }
-        }
+      &:nth-child(1) {
+        transform: translate(-50%, -0.5rem);
+        animation-delay: 0.4s;
+      }
+      &:nth-child(2) {
+        transform: translate(-50%, 0);
+        animation-delay: 0.1s;
       }
     }
   }
@@ -161,13 +166,14 @@ img {
   min-height: 100vh;
   background-color: $medium-color;
   color: set-text-color($medium-color);
+
   display: flex;
   vertical-align: center;
 
-  .headshot {
-    width: 100%;
+  &-intro {
+    padding-bottom: 5rem;
 
-    .circle-face {
+    .circle-headshot {
       width: 200px;
       height: 200px;
       border-radius: 100px;
@@ -178,18 +184,17 @@ img {
       background-repeat: no-repeat;
       margin: auto;
     }
-  }
 
-  .section-title {
-    margin-top: 2rem;
-  }
+    .section-title {
+      margin-top: 2rem;
+    }
 
-  .lead {
-    font-size: 1rem;
+    .lead {
+      font-size: 1rem;
+    }
   }
 
   .specials {
-    margin-top: 3rem;
     display: grid;
     grid-gap: 8rem;
     grid-template-columns: repeat(2, 1fr);

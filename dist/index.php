@@ -14,7 +14,7 @@
 <body>
   <nav id="main-nav">
     <div class="logo">
-      <div class="circle-face"></div>
+      <div class="circle-headshot"></div>
     </div>
     <ul>
       <li><a href="#header-home" class="current">Intro</a></li>
@@ -29,7 +29,7 @@
   <!-- Intro -->
   <section id="header-home">
     <div id="particles-js">
-      <div class="header-content">
+      <div id="header-content">
         <h1>Hi, I'm<br /><span>Mike</span></h1>
         <p>
           I am a
@@ -49,20 +49,20 @@
   <!-- About -->
   <section id="about" class="text-center">
     <div class="container">
-      <div class="headshot">
-        <div class="circle-face"></div>
+      <div id="about-intro">
+        <div class="circle-headshot"></div>
+        <h2 class="section-title">
+          MY SPECIALTY IS
+        </h2>
+        <div class="divider-line"></div>
+        <p class="lead">
+          Helping companies build and grow great digital products through
+          data-driven decision making. I work cross-functionally every day with
+          talented engineers and designers to develop industry-leading SaaS
+          fintech products that bring modern and secure online banking
+          experiences for millions of consumers.
+        </p>
       </div>
-      <h2 class="section-title">
-        MY SPECIALTY IS
-      </h2>
-      <div class="divider-line"></div>
-      <p class="lead">
-        Helping companies build and grow great digital products through
-        data-driven decision making. I work cross-functionally every day with
-        talented engineers and designers to develop industry-leading SaaS
-        fintech products that bring modern and secure online banking
-        experiences for millions of consumers.
-      </p>
       <div class="specials">
         <div class="functions">
           <h2>Functional</h2>

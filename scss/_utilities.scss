@@ -22,6 +22,14 @@
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
+.fixed {
+  position: fixed;
+}
+
 // Buttons
 %btn-shared {
   display: inline-block;

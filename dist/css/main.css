@@ -29,6 +29,12 @@
 .text-center {
   text-align: center; }
 
+.hidden {
+  display: none; }
+
+.fixed {
+  position: fixed; }
+
 .btn-main, .btn-light, .btn-dark {
   display: inline-block;
   padding: 0.8rem 2rem;
@@ -107,7 +113,7 @@ img {
     transition: background-color 0.2s linear; }
   #main-nav .logo {
     padding: 0 1.5rem 0 1.5rem; }
-    #main-nav .logo .circle-face {
+    #main-nav .logo .circle-headshot {
       width: 56px;
       height: 56px;
       border-radius: 28px;
@@ -134,48 +140,53 @@ img {
       border-color: #e9c46a; }
 
 #header-home {
-  background-color: #264653;
   height: 100vh;
-  color: #fff; }
-  #header-home #particles-js {
-    height: 100%;
+  width: 100%;
+  color: #fff;
+  background-color: #264653; }
+
+#header-content {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  #header-content h1 {
+    font-size: 6rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-family: "Daikon-Black";
+    display: inline-block;
+    letter-spacing: 0.1rem; }
+    #header-content h1 span {
+      letter-spacing: 1.1rem;
+      margin-right: -12px; }
+  #header-content p {
+    font-size: 1.25rem; }
+  #header-content a {
+    margin-top: 30%; }
+
+#particles-js {
+  height: 100%;
+  width: 100%;
+  position: relative; }
+
+#scroll-indicator {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -7rem); }
+  #scroll-indicator .arrows {
     position: relative; }
-    #header-home #particles-js .header-content {
+    #scroll-indicator .arrows i {
       position: absolute;
-      text-align: center;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-      #header-home #particles-js .header-content h1 {
-        font-size: 6rem;
-        line-height: 1.2;
-        text-transform: uppercase;
-        font-family: "Daikon-Black";
-        display: inline-block;
-        letter-spacing: 0.1rem; }
-        #header-home #particles-js .header-content h1 span {
-          letter-spacing: 1.1rem;
-          margin-right: -12px; }
-      #header-home #particles-js .header-content p {
-        font-size: 1.25rem; }
-      #header-home #particles-js .header-content a {
-        margin-top: 30%; }
-    #header-home #particles-js #scroll-indicator {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translate(-50%, -9vh); }
-      #header-home #particles-js #scroll-indicator .arrows {
-        position: relative; }
-        #header-home #particles-js #scroll-indicator .arrows i {
-          position: absolute;
-          animation: fall-fade 1.5s linear infinite; }
-          #header-home #particles-js #scroll-indicator .arrows i:nth-child(1) {
-            transform: translate(-50%, -8px);
-            animation-delay: 0.4s; }
-          #header-home #particles-js #scroll-indicator .arrows i:nth-child(2) {
-            transform: translate(-50%, 0px);
-            animation-delay: 0.1s; }
+      animation: fall-fade 1.5s linear infinite; }
+      #scroll-indicator .arrows i:nth-child(1) {
+        transform: translate(-50%, -0.5rem);
+        animation-delay: 0.4s; }
+      #scroll-indicator .arrows i:nth-child(2) {
+        transform: translate(-50%, 0);
+        animation-delay: 0.1s; }
 
 #about {
   min-height: 100vh;
@@ -183,9 +194,9 @@ img {
   color: #fff;
   display: flex;
   vertical-align: center; }
-  #about .headshot {
-    width: 100%; }
-    #about .headshot .circle-face {
+  #about-intro {
+    padding-bottom: 5rem; }
+    #about-intro .circle-headshot {
       width: 200px;
       height: 200px;
       border-radius: 100px;
@@ -195,12 +206,11 @@ img {
       background-position: 50%;
       background-repeat: no-repeat;
       margin: auto; }
-  #about .section-title {
-    margin-top: 2rem; }
-  #about .lead {
-    font-size: 1rem; }
+    #about-intro .section-title {
+      margin-top: 2rem; }
+    #about-intro .lead {
+      font-size: 1rem; }
   #about .specials {
-    margin-top: 3rem;
     display: grid;
     grid-gap: 8rem;
     grid-template-columns: repeat(2, 1fr); }
