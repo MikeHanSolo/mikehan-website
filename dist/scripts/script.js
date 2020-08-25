@@ -42,19 +42,6 @@ $(document).ready(function () {
     });
   }
 
-  function isElementEnteredView(element) {
-    var elementTop = $(element).offset().top;
-    var elementBottom = elementTop + $(element).outerHeight();
-    var screenTop = $(window).scrollTop();
-    var screenBottom = screenTop + $(window).innerHeight();
-
-    if (screenBottom > elementTop && screenTop < elementBottom) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
   function isElementInView(element, fraction = 1) {
     var bounding = $(element)[0].getBoundingClientRect();
 
@@ -107,9 +94,6 @@ $(document).ready(function () {
   ].forEach(hideElement);
 
   $(document).scroll(function () {
-    // Highlight current section in navbar
-    highlightNavLink($sections, scrollPos, $mainNav.outerHeight());
-
     // Vertical position of scrollbar
     var scrollPos = $(window).scrollTop();
     var scrollDirDown = true;
@@ -123,6 +107,9 @@ $(document).ready(function () {
 
     // Toggle solid navbar on scroll
     $mainNav.toggleClass("scrolled", scrollPos > $mainNav.height());
+
+    // Highlight current section in navbar
+    highlightNavLink($sections, scrollPos, $mainNav.outerHeight());
 
     // Hide scroll arrow after scroll
     if (scrollPos >= 250) {
@@ -167,30 +154,26 @@ $(document).ready(function () {
 
       hideChildren("#about-intro");
     } else {
-      $headerHome.stop().css({
+      $headerHome.css({
         "background-color": "#2a9d8f",
         transition: "background-color 800ms linear",
       });
-      $headerBackground.stop().css({
+      $headerBackground.css({
         position: "relative",
         "z-index": "-1",
       });
-      $aboutIntro.stop().css({
+      $aboutIntro.css({
         "background-color": "#2a9d8f",
         transition: "background-color 800ms linear",
       });
-      $aboutSection.stop().css({
+      $aboutSection.css({
         "background-color": "#2a9d8f",
         transition: "background-color 800ms linear",
       });
 
       // Fade in once fully scrolled
       ["#about-intro", ".functions", ".industries"].forEach((element) =>
-        isElementInView(element, 1) ? revealChildrenSlow(element) : null
-      );
-
-      [".functions", ".industries"].forEach((element) =>
-        isElementInView(element, 0.9) ? revealChildrenSlow(element) : null
+        isElementInView(element, 0.8) ? revealChildrenSlow(element) : null
       );
 
       [".experiences-list", "#contact > .container"].forEach((element) =>
