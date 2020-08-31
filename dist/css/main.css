@@ -474,20 +474,21 @@ img {
     #skills .container .skills-list {
       max-width: 750px;
       margin: 2rem auto 3rem auto; }
-      #skills .container .skills-list li div {
+      #skills .container .skills-list li {
         width: 150px;
         height: 150px;
         display: inline-block;
-        overflow: hidden;
         background-color: #fff;
         margin: 0.5rem;
         border: solid 7px #264653;
         line-height: 150px; }
-        #skills .container .skills-list li div img {
+        #skills .container .skills-list li div {
+          overflow: hidden; }
+        #skills .container .skills-list li img {
           vertical-align: middle;
           width: auto;
           height: 120px; }
-          #skills .container .skills-list li div img.land {
+          #skills .container .skills-list li img.land {
             width: 120px;
             height: auto; }
 

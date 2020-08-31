@@ -241,15 +241,18 @@ img {
       max-width: 750px;
       margin: 2rem auto 3rem auto;
 
-      li div {
+      li {
         width: 150px;
         height: 150px;
         display: inline-block;
-        overflow: hidden;
         background-color: #fff;
         margin: 0.5rem;
         border: solid 7px $dark-color;
         line-height: 150px;
+
+        div {
+          overflow: hidden;
+        }
 
         img {
           vertical-align: middle;
