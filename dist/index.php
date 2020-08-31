@@ -237,10 +237,10 @@
           <div><img src="img/tech/css.png" alt="CSS" /></div>
         </li>
         <li>
-          <div><img src="img/tech/jquery.png" alt="jQuery" class="land" /></div>
+          <div><img src="img/tech/sass.png" alt="Sass" /></div>
         </li>
         <li>
-          <div><img src="img/tech/sass.png" alt="Sass" /></div>
+          <div><img src="img/tech/jquery.png" alt="jQuery" class="land" /></div>
         </li>
         <li>
           <div><img src="img/tech/react.png" alt="React" /></div>
