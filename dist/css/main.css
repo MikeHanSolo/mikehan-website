@@ -260,7 +260,7 @@ input[class^="btn-"]:hover {
       body #skills .container .skills-list li {
         width: 74px;
         height: 74px;
-        margin: 0 0.2rem 0.5rem 0.2rem; }
+        margin: 0.25rem; }
         body #skills .container .skills-list li div {
           display: flex;
           vertical-align: middle;
@@ -480,7 +480,7 @@ img {
         display: inline-block;
         overflow: hidden;
         background-color: #fff;
-        margin: 0 0.5rem 1rem 0.5rem;
+        margin: 0.5rem;
         border: solid 7px #264653;
         line-height: 150px; }
         #skills .container .skills-list li img {
