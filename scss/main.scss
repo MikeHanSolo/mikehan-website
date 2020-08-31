@@ -240,6 +240,7 @@ img {
     .skills-list {
       max-width: 750px;
       margin: 2rem auto 3rem auto;
+      vertical-align: top;
 
       li {
         width: 150px;
@@ -247,9 +248,10 @@ img {
         display: inline-block;
         overflow: hidden;
         background-color: #fff;
-        margin: 0.5rem;
+        margin: 0.75rem 0.5rem;
         border: solid 7px $dark-color;
         line-height: 150px;
+        vertical-align: top;
 
         img {
           vertical-align: middle;
