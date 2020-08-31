@@ -474,7 +474,7 @@ img {
     #skills .container .skills-list {
       max-width: 750px;
       margin: 2rem auto 3rem auto; }
-      #skills .container .skills-list li {
+      #skills .container .skills-list li div {
         width: 150px;
         height: 150px;
         display: inline-block;
@@ -483,11 +483,11 @@ img {
         margin: 0.5rem;
         border: solid 7px #264653;
         line-height: 150px; }
-        #skills .container .skills-list li img {
+        #skills .container .skills-list li div img {
           vertical-align: middle;
           width: auto;
           height: 120px; }
-          #skills .container .skills-list li img.land {
+          #skills .container .skills-list li div img.land {
             width: 120px;
             height: auto; }
 
