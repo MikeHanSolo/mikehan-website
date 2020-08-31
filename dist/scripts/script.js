@@ -172,7 +172,7 @@ $(document).ready(function () {
 
       // Fade in once fully scrolled
       ["#about-intro", ".functions", ".industries"].forEach((element) =>
-        isElementInView(element, 0.8) ? revealChildrenSlow(element) : null
+        isElementInView(element, 0.7) ? revealChildrenSlow(element) : null
       );
 
       [".experiences-list", "#contact > .container"].forEach((element) =>
