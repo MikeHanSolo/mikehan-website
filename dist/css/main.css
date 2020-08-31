@@ -258,8 +258,8 @@ input[class^="btn-"]:hover {
     body #skills .container .skills-list {
       max-width: 400px; }
       body #skills .container .skills-list li {
-        width: 74px;
-        height: 74px;
+        width: 70px;
+        height: 70px;
         margin: 0.25rem; }
         body #skills .container .skills-list li div {
           display: flex;
@@ -269,9 +269,9 @@ input[class^="btn-"]:hover {
           body #skills .container .skills-list li div img {
             margin: auto;
             width: auto;
-            height: 64px; }
+            height: 60px; }
             body #skills .container .skills-list li div img.land {
-              width: 64px;
+              width: 60px;
               height: auto; }
   body #experiences .container .experiences-list .experience {
     margin-top: 1rem;
@@ -478,12 +478,11 @@ img {
         width: 150px;
         height: 150px;
         display: inline-block;
+        overflow: hidden;
         background-color: #fff;
         margin: 0.5rem;
         border: solid 7px #264653;
         line-height: 150px; }
-        #skills .container .skills-list li div {
-          overflow: hidden; }
         #skills .container .skills-list li img {
           vertical-align: middle;
           width: auto;
