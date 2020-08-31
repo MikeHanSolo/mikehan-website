@@ -55,22 +55,20 @@ $(document).ready(function () {
       var childElements = $(parent).children();
 
       $(childElements).each(function (index) {
-        fn($(this).delay(delayTime * index));
+        var that = this;
+        var t = setTimeout(function () {
+          fn(that);
+        }, delayTime * index);
       });
     };
   }
 
   function revealElement(element) {
-    $(element).css("visibility", "visible").fadeTo("slow", 1);
+    $(element).removeClass("hidden").addClass("reveal");
   }
 
   function hideElement(element) {
-    $(element).stop().css({
-      "-webkit-animation-play-state": "paused",
-      opacity: 0.0,
-      visibility: "hidden",
-      animation: "none",
-    });
+    $(element).removeClass("reveal").addClass("hidden");
   }
 
   var revealChildrenSlow = applyFnChildren(revealElement, 600);
@@ -109,6 +107,7 @@ $(document).ready(function () {
     $mainNav.toggleClass("scrolled", scrollPos > $mainNav.height());
 
     // Highlight current section in navbar
+    highlightNavLink($sections, scrollPos, $mainNav.outerHeight());
     highlightNavLink($sections, scrollPos, $mainNav.outerHeight());
 
     // Hide scroll arrow after scroll
@@ -177,15 +176,15 @@ $(document).ready(function () {
       );
 
       [".experiences-list", "#contact > .container"].forEach((element) =>
-        isElementInView(element, 0.7) ? revealChildrenSlow(element) : null
+        isElementInView(element, 0.6) ? revealChildrenSlow(element) : null
       );
 
       ["#skills > .container > .skills-list"].forEach((element) =>
-        isElementInView(element, 1.2) ? revealChildrenFast(element) : null
+        isElementInView(element, 1) ? revealChildrenFast(element) : null
       );
 
       ["#experiences", "#skills"].forEach((element) =>
-        isElementInView(element + " > .container", 0.6)
+        isElementInView(element + " > .container > .section-title", 1)
           ? revealElement(element + " > .container > .section-title")
           : null
       );

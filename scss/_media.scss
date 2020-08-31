@@ -1,0 +1,215 @@
+// Tablets and smaller
+@media (max-width: 800px) and (min-width: 651px) {
+  body {
+    .container {
+      padding: 6rem 2rem;
+    }
+
+    #main-nav {
+      ul {
+        visibility: hidden;
+      }
+
+      .ham-menu-wrap {
+        visibility: visible;
+      }
+    }
+
+    #about {
+      .specials {
+        grid-gap: 3rem;
+
+        .functions,
+        .industries {
+          .specials-content {
+            div {
+              float: left;
+              display: block;
+              line-height: 1.5rem;
+
+              i {
+                font-size: 1.5rem;
+                padding: 0 0.4rem 0 0;
+                line-height: 1.5rem;
+              }
+            }
+
+            p {
+              clear: both;
+            }
+          }
+        }
+      }
+    }
+
+    #experiences {
+      .experience-content {
+        p:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Smartphones
+@media (max-width: 650px) {
+  body {
+    .container {
+      padding: 6rem 2rem;
+    }
+
+    #main-nav {
+      ul {
+        visibility: hidden;
+      }
+
+      .ham-menu-wrap {
+        visibility: visible;
+      }
+    }
+
+    #header-content {
+      h1 {
+        font-size: 5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    #about {
+      &-intro {
+        padding-bottom: 4rem;
+      }
+
+      .circle-headshot {
+        width: 150px;
+        height: 150px;
+      }
+
+      .specials {
+        display: block;
+
+        #functions-intro,
+        #industries-intro {
+          display: none;
+        }
+
+        .functions,
+        .industries {
+          .specials-content {
+            div {
+              display: inline-block;
+              margin: 0 auto;
+              line-height: 1.5rem;
+
+              i {
+                font-size: 1.5rem;
+                padding: 0 0.4rem 0 0;
+                line-height: 1.5rem;
+              }
+            }
+
+            p {
+              clear: both;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    #skills {
+      visibility: visible;
+
+      .container {
+        .skills-list {
+          max-width: 400px;
+
+          li {
+            width: 74px;
+            height: 74px;
+            margin: 0 0.2rem 0.5rem 0.2rem;
+
+            div {
+              display: flex;
+              vertical-align: middle;
+              width: 100%;
+              height: 100%;
+
+              img {
+                margin: auto;
+                width: auto;
+                height: 64px;
+
+                &.land {
+                  width: 64px;
+                  height: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #experiences {
+      .container {
+        .experiences-list {
+          .experience {
+            margin-top: 1rem;
+            min-height: auto;
+
+            img {
+              float: none;
+              width: 100px;
+              height: 100px;
+              background-color: #fff;
+              margin: 0.5rem 0rem 1rem 0rem;
+              border: solid 7px $dark-color;
+            }
+
+            .experience-content {
+              text-align: center;
+              width: 95%;
+              margin: 0 auto;
+
+              p,
+              ul {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #contact {
+      &-form {
+        input,
+        textarea {
+          border-radius: 5px;
+          border: 1px $dark-color solid;
+          font-family: "Daikon-Regular";
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .text-fields {
+          display: inline-block;
+          margin-bottom: 1.2rem;
+
+          .text-input {
+            padding: 0.5rem 1rem;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

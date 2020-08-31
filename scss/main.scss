@@ -1,5 +1,7 @@
 @import "config";
 @import "utilities";
+@import "responsive-menu";
+@import "media";
 
 // General styling
 * {
@@ -21,6 +23,10 @@ a {
 h1,
 h2 {
   text-transform: uppercase;
+  font-family: "Daikon-Black";
+}
+
+h3 {
   font-family: "Daikon-Black";
 }
 
@@ -107,16 +113,16 @@ img {
     transform: translate(-50%, -50%);
 
     h1 {
-      font-size: 6rem;
+      font-size: 7rem;
       line-height: 1.2;
       text-transform: uppercase;
       font-family: "Daikon-Black";
-      display: inline-block;
-      letter-spacing: 0.1rem;
+      display: block;
 
-      span {
-        letter-spacing: 1.1rem;
-        margin-right: -12px;
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
       }
     }
 
@@ -171,7 +177,7 @@ img {
   vertical-align: center;
 
   &-intro {
-    padding-bottom: 5rem;
+    padding-bottom: 4rem;
 
     .circle-headshot {
       width: 200px;
@@ -196,17 +202,25 @@ img {
 
   .specials {
     display: grid;
-    grid-gap: 8rem;
+    grid-gap: 4.5rem;
     grid-template-columns: repeat(2, 1fr);
-
-    .special-content {
-      text-align: left;
-      margin: 0rem 0rem 2rem 3rem;
-    }
 
     .functions,
     .industries {
-      display: block;
+      .specials-content {
+        padding-bottom: 2rem;
+
+        i {
+          padding-right: 0.75rem;
+        }
+
+        h3,
+        p {
+          display: block;
+          overflow: hidden;
+          text-align: left;
+        }
+      }
     }
   }
 }
@@ -265,25 +279,22 @@ img {
 
     .experiences-list {
       .experience {
+        margin-top: 3rem;
+        min-height: 180px;
+
         img {
           float: left;
           width: 150px;
           height: 150px;
           background-color: #fff;
-          margin: 1rem 1.5rem 1rem 1rem;
+          margin: 0.5rem 1.5rem 1rem 0rem;
           border: solid 7px $dark-color;
-          line-height: 150px;
         }
 
         .experience-content {
+          display: block;
           text-align: left;
-          margin-top: 3rem;
           overflow: hidden;
-
-          h3 {
-            padding-top: 0.5rem;
-            font-family: "Daikon-Black";
-          }
         }
       }
     }

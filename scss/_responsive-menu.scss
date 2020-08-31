@@ -1,0 +1,122 @@
+@import "config";
+
+.ham-menu-wrap {
+  visibility: hidden;
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 1;
+  box-sizing: border-box;
+
+  .toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    width: 56px;
+    height: 56px;
+    opacity: 0;
+    z-index: 3;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    // Hamburger lines
+    span {
+      position: relative;
+      width: 33px;
+      height: 4px;
+      background-color: #fff;
+      border-radius: 3px;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+        background-color 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+        opacity 0.55s ease;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        margin-bottom: 5px;
+      }
+
+      &:nth-child(3) {
+        // Move pivot point to bottom left corner
+        transform-origin: 0% 100%;
+      }
+    }
+  }
+}
+
+.toggle:checked + .hamburger > span {
+  transform: rotate(45deg) translate(-2px, 0px);
+}
+
+.toggle:checked + .hamburger > span:nth-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.1, 0.1);
+}
+
+.toggle:checked + .hamburger > span:nth-child(3) {
+  transform: rotate(-45deg) translate(0px, -1px);
+}
+
+.ham-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    background-color: #333;
+    height: 200vh;
+    width: 200vw;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+
+    div {
+      text-align: center;
+      max-height: 90vh;
+      max-width: 90vw;
+    }
+  }
+
+  #ham-menu-links {
+    display: block;
+
+    li {
+      padding: 1.5rem 0 1.5rem 0;
+    }
+  }
+}
+
+.toggle:checked ~ .ham-menu {
+  visibility: visible;
+
+  #ham-menu-links {
+    visibility: visible;
+  }
+}
+
+.toggle:checked ~ .ham-menu > div,
+.toggle:checked ~ .ham-menu > div > div {
+  opacity: 0.97;
+}

@@ -1,6 +1,8 @@
+@import "config";
+
 .container {
   max-width: $content-width;
-  padding: 6rem 1.5rem;
+  padding: 6rem 4rem;
   margin: auto;
   overflow: hidden;
 }
@@ -23,11 +25,17 @@
 }
 
 .hidden {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
-.fixed {
-  position: fixed;
+.reveal {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 600ms $swing;
+  -moz-transition: opacity 600ms $swing;
+  -o-transition: opacity 600ms $swing;
+  transition: opacity 600ms $swing;
 }
 
 // Buttons

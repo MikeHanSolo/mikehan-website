@@ -9,9 +9,20 @@
     top: 4rem;
     opacity: 0; } }
 
+@keyframes fall-fade {
+  0% {
+    top: 0rem;
+    opacity: 0; }
+  25% {
+    top: 2rem;
+    opacity: 1; }
+  100% {
+    top: 4rem;
+    opacity: 0; } }
+
 .container {
   max-width: 1280px;
-  padding: 6rem 1.5rem;
+  padding: 6rem 4rem;
   margin: auto;
   overflow: hidden; }
 
@@ -30,10 +41,16 @@
   text-align: center; }
 
 .hidden {
-  display: none; }
+  opacity: 0;
+  visibility: hidden; }
 
-.fixed {
-  position: fixed; }
+.reveal {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 600ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  -moz-transition: opacity 600ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  -o-transition: opacity 600ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  transition: opacity 600ms cubic-bezier(0.02, 0.01, 0.47, 1); }
 
 .btn-main, .btn-light, .btn-dark {
   display: inline-block;
@@ -76,6 +93,220 @@ input[class^="btn-"]:hover {
   padding-bottom: 0.5rem;
   font-size: 38px; }
 
+@keyframes fall-fade {
+  0% {
+    top: 0rem;
+    opacity: 0; }
+  25% {
+    top: 2rem;
+    opacity: 1; }
+  100% {
+    top: 4rem;
+    opacity: 0; } }
+
+.ham-menu-wrap {
+  visibility: hidden;
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 1;
+  box-sizing: border-box; }
+  .ham-menu-wrap .toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    width: 56px;
+    height: 56px;
+    opacity: 0;
+    z-index: 3; }
+  .ham-menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .ham-menu-wrap .hamburger span {
+      position: relative;
+      width: 33px;
+      height: 4px;
+      background-color: #fff;
+      border-radius: 3px;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background-color 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
+      .ham-menu-wrap .hamburger span:nth-child(1), .ham-menu-wrap .hamburger span:nth-child(2) {
+        margin-bottom: 5px; }
+      .ham-menu-wrap .hamburger span:nth-child(3) {
+        transform-origin: 0% 100%; }
+
+.toggle:checked + .hamburger > span {
+  transform: rotate(45deg) translate(-2px, 0px); }
+
+.toggle:checked + .hamburger > span:nth-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.1, 0.1); }
+
+.toggle:checked + .hamburger > span:nth-child(3) {
+  transform: rotate(-45deg) translate(0px, -1px); }
+
+.ham-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .ham-menu div {
+    background-color: #333;
+    height: 200vh;
+    width: 200vw;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease; }
+    .ham-menu div div {
+      text-align: center;
+      max-height: 90vh;
+      max-width: 90vw; }
+  .ham-menu #ham-menu-links {
+    display: block; }
+    .ham-menu #ham-menu-links li {
+      padding: 1.5rem 0 1.5rem 0; }
+
+.toggle:checked ~ .ham-menu {
+  visibility: visible; }
+  .toggle:checked ~ .ham-menu #ham-menu-links {
+    visibility: visible; }
+
+.toggle:checked ~ .ham-menu > div,
+.toggle:checked ~ .ham-menu > div > div {
+  opacity: 0.97; }
+
+@media (max-width: 800px) and (min-width: 651px) {
+  body .container {
+    padding: 6rem 2rem; }
+  body #main-nav ul {
+    visibility: hidden; }
+  body #main-nav .ham-menu-wrap {
+    visibility: visible; }
+  body #about .specials {
+    grid-gap: 3rem; }
+    body #about .specials .functions .specials-content div,
+    body #about .specials .industries .specials-content div {
+      float: left;
+      display: block;
+      line-height: 1.5rem; }
+      body #about .specials .functions .specials-content div i,
+      body #about .specials .industries .specials-content div i {
+        font-size: 1.5rem;
+        padding: 0 0.4rem 0 0;
+        line-height: 1.5rem; }
+    body #about .specials .functions .specials-content p,
+    body #about .specials .industries .specials-content p {
+      clear: both; }
+  body #experiences .experience-content p:last-child {
+    display: none; } }
+
+@media (max-width: 650px) {
+  body .container {
+    padding: 6rem 2rem; }
+  body #main-nav ul {
+    visibility: hidden; }
+  body #main-nav .ham-menu-wrap {
+    visibility: visible; }
+  body #header-content h1 {
+    font-size: 5rem; }
+  body #header-content p {
+    font-size: 1rem; }
+  body #about-intro {
+    padding-bottom: 4rem; }
+  body #about .circle-headshot {
+    width: 150px;
+    height: 150px; }
+  body #about .specials {
+    display: block; }
+    body #about .specials #functions-intro,
+    body #about .specials #industries-intro {
+      display: none; }
+    body #about .specials .functions .specials-content div,
+    body #about .specials .industries .specials-content div {
+      display: inline-block;
+      margin: 0 auto;
+      line-height: 1.5rem; }
+      body #about .specials .functions .specials-content div i,
+      body #about .specials .industries .specials-content div i {
+        font-size: 1.5rem;
+        padding: 0 0.4rem 0 0;
+        line-height: 1.5rem; }
+    body #about .specials .functions .specials-content p,
+    body #about .specials .industries .specials-content p {
+      clear: both;
+      text-align: center; }
+  body #skills {
+    visibility: visible; }
+    body #skills .container .skills-list {
+      max-width: 400px; }
+      body #skills .container .skills-list li {
+        width: 74px;
+        height: 74px;
+        margin: 0 0.2rem 0.5rem 0.2rem; }
+        body #skills .container .skills-list li div {
+          display: flex;
+          vertical-align: middle;
+          width: 100%;
+          height: 100%; }
+          body #skills .container .skills-list li div img {
+            margin: auto;
+            width: auto;
+            height: 64px; }
+            body #skills .container .skills-list li div img.land {
+              width: 64px;
+              height: auto; }
+  body #experiences .container .experiences-list .experience {
+    margin-top: 1rem;
+    min-height: auto; }
+    body #experiences .container .experiences-list .experience img {
+      float: none;
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      margin: 0.5rem 0rem 1rem 0rem;
+      border: solid 7px #264653; }
+    body #experiences .container .experiences-list .experience .experience-content {
+      text-align: center;
+      width: 95%;
+      margin: 0 auto; }
+      body #experiences .container .experiences-list .experience .experience-content p,
+      body #experiences .container .experiences-list .experience .experience-content ul {
+        display: none; }
+  body #contact-form input,
+  body #contact-form textarea {
+    border-radius: 5px;
+    border: 1px #264653 solid;
+    font-family: "Daikon-Regular"; }
+    body #contact-form input:focus,
+    body #contact-form textarea:focus {
+      outline: none; }
+  body #contact-form .text-fields {
+    display: inline-block;
+    margin-bottom: 1.2rem; }
+    body #contact-form .text-fields .text-input {
+      padding: 0.5rem 1rem;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 0.5rem; } }
+
 * {
   margin: 0;
   padding: 0; }
@@ -92,6 +323,9 @@ a {
 h1,
 h2 {
   text-transform: uppercase;
+  font-family: "Daikon-Black"; }
+
+h3 {
   font-family: "Daikon-Black"; }
 
 ul {
@@ -152,15 +386,15 @@ img {
   left: 50%;
   transform: translate(-50%, -50%); }
   #header-content h1 {
-    font-size: 6rem;
+    font-size: 7rem;
     line-height: 1.2;
     text-transform: uppercase;
     font-family: "Daikon-Black";
-    display: inline-block;
-    letter-spacing: 0.1rem; }
-    #header-content h1 span {
-      letter-spacing: 1.1rem;
-      margin-right: -12px; }
+    display: block; }
+    #header-content h1 div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
   #header-content p {
     font-size: 1.25rem; }
   #header-content a {
@@ -195,7 +429,7 @@ img {
   display: flex;
   vertical-align: center; }
   #about-intro {
-    padding-bottom: 5rem; }
+    padding-bottom: 4rem; }
     #about-intro .circle-headshot {
       width: 200px;
       height: 200px;
@@ -212,14 +446,21 @@ img {
       font-size: 1rem; }
   #about .specials {
     display: grid;
-    grid-gap: 8rem;
+    grid-gap: 4.5rem;
     grid-template-columns: repeat(2, 1fr); }
-    #about .specials .special-content {
-      text-align: left;
-      margin: 0rem 0rem 2rem 3rem; }
-    #about .specials .functions,
-    #about .specials .industries {
-      display: block; }
+    #about .specials .functions .specials-content,
+    #about .specials .industries .specials-content {
+      padding-bottom: 2rem; }
+      #about .specials .functions .specials-content i,
+      #about .specials .industries .specials-content i {
+        padding-right: 0.75rem; }
+      #about .specials .functions .specials-content h3,
+      #about .specials .functions .specials-content p,
+      #about .specials .industries .specials-content h3,
+      #about .specials .industries .specials-content p {
+        display: block;
+        overflow: hidden;
+        text-align: left; }
 
 #skills {
   min-height: 100vh;
@@ -258,21 +499,20 @@ img {
   vertical-align: center; }
   #experiences .container {
     text-align: center; }
-    #experiences .container .experiences-list .experience img {
-      float: left;
-      width: 150px;
-      height: 150px;
-      background-color: #fff;
-      margin: 1rem 1.5rem 1rem 1rem;
-      border: solid 7px #264653;
-      line-height: 150px; }
-    #experiences .container .experiences-list .experience .experience-content {
-      text-align: left;
+    #experiences .container .experiences-list .experience {
       margin-top: 3rem;
-      overflow: hidden; }
-      #experiences .container .experiences-list .experience .experience-content h3 {
-        padding-top: 0.5rem;
-        font-family: "Daikon-Black"; }
+      min-height: 180px; }
+      #experiences .container .experiences-list .experience img {
+        float: left;
+        width: 150px;
+        height: 150px;
+        background-color: #fff;
+        margin: 0.5rem 1.5rem 1rem 0rem;
+        border: solid 7px #264653; }
+      #experiences .container .experiences-list .experience .experience-content {
+        display: block;
+        text-align: left;
+        overflow: hidden; }
 
 #contact {
   min-height: 100vh;

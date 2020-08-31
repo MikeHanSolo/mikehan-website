@@ -8,6 +8,9 @@ $main-color: #e9c46a;
 $light-color: #f4a261;
 $accent-color: #e76f51;
 
+// Fade in curve
+$swing: cubic-bezier(0.02, 0.01, 0.47, 1);
+
 // Functions
 @function set-text-color($color) {
   @if (lightness($color) > 50) {

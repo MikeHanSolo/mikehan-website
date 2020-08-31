@@ -25,17 +25,54 @@
     <ul>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <div class="ham-menu-wrap">
+      <input type="checkbox" class="toggle">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="ham-menu">
+        <div>
+          <div>
+            <ul id="ham-menu-links">
+              <li><a href="#header-home">Intro</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#experiences">Experience</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </nav>
   <!-- Intro -->
   <section id="header-home">
     <div id="particles-js">
       <div id="header-content">
-        <h1>Hi, I'm<br /><span>Mike</span></h1>
+        <h1>
+          <div>
+            <span>H</span>
+            <span>i</span>
+            <span>,</span>
+            <span>&nbsp;</span>
+            <span>I</span>
+            <span>'</span>
+            <span>m</span>
+          </div>
+          <div>
+            <span>M</span>
+            <span>i</span>
+            <span>k</span>
+            <span>e</span>
+          </div>
+        </h1>
         <p>
           I am a
-          <span class="txt-type" data-wait="3000" data-words='["Product Manager..", "Data Scientist..", "Developer..", "proud Chicagoan..", "Northwestern Wildcat.."]'></span>
+          <span class="txt-type" data-wait="3000" data-words='["Product Manager..", "Data Scientist..", "proud Chicagoan..", "NU Wildcat.."]'></span>
         </p>
-        <a href="#experiences" class="btn-main">Jump To Experience</a>
+        <a href="#experiences" class="btn-main">To Experience</a>
       </div>
       <div id="scroll-indicator">
         <div class="arrows">
@@ -65,85 +102,89 @@
       </div>
       <div class="specials">
         <div class="functions">
-          <h2>Functional</h2>
-          <div class="divider-line"></div>
-          <div class="functional-area">
-            <i class="las la-directions"></i>
-            <div class="special-content">
+          <div id="functions-intro">
+            <h2>Functional Expertise</h2>
+            <div class="divider-line"></div>
+          </div>
+          <div class="specials-content">
+            <div>
+              <i class="las la-directions"></i>
               <h3>Product Strategy</h3>
-              <p>
-                Developing market assessments, conducting customer interviews,
-                relationship management, and defining and tracking success
-                metrics through automated dashboards
-              </p>
             </div>
+            <p>
+              Developing market assessments, conducting customer interviews,
+              relationship management, and defining and tracking success
+              metrics through automated dashboards
+            </p>
           </div>
-          <div class="functional-area">
-            <i class="las la-wrench"></i>
-            <div class="special-content">
+          <div class="specials-content">
+            <div>
+              <i class="las la-wrench"></i>
               <h3>Product Development</h3>
-              <p>
-                Running design sprints, allocating engineering resources, and
-                translating business-to-technical requirements
-              </p>
             </div>
+            <p>
+              Running design sprints, allocating engineering resources, and
+              translating business-to-technical requirements
+            </p>
           </div>
-          <div class="functional-area">
-            <i class="las la-chart-bar"></i>
-            <div class="special-content">
+          <div class="specials-content">
+            <div>
+              <i class="las la-chart-bar"></i>
               <h3>Advanced Analytics & BI</h3>
-              <p>
-                Customer attrition modeling, A/B testing, direct mail uplift
-                modeling, text classification analysis of online reviews, and
-                building reporting dashboards
-              </p>
             </div>
+            <p>
+              Customer attrition modeling, A/B testing, direct mail uplift
+              modeling, text classification analysis of online reviews, and
+              building reporting dashboards
+            </p>
           </div>
-          <div class="functional-area">
-            <i class="lab la-connectdevelop"></i>
-            <div class="special-content">
+          <div class="specials-content">
+            <div>
+              <i class="lab la-connectdevelop"></i>
               <h3>Data Engineering</h3>
-              <p>
-                Building ETL for data warehouse and data governance strategy
-              </p>
             </div>
+            <p>
+              Building ETL for data warehouse and data governance strategy
+            </p>
           </div>
         </div>
         <div class="industries">
-          <h2>Industry</h2>
-          <div class="divider-line"></div>
-          <div class="industry">
-            <i class="las la-piggy-bank"></i>
-            <div class="special-content">
+          <div id="industries-intro">
+            <h2>Industry Expertise</h2>
+            <div class="divider-line"></div>
+          </div>
+          <div class="specials-content">
+            <div>
+              <i class="las la-piggy-bank"></i>
               <h3>Financial Services</h3>
-              <p>
-                Digital product originations and servicing for personal loan
-                products. Managing marketing channels and building tools for
-                improved campaign conversion tracking. Large-scale security
-                infrastructure migrations
-              </p>
             </div>
+            <p>
+              Digital product originations and servicing for personal loan
+              products. Managing marketing channels and building tools for
+              improved campaign conversion tracking. Large-scale security
+              infrastructure migrations
+            </p>
           </div>
-          <div class="industry">
-            <i class="las la-user-shield"></i>
-            <div class="special-content">
+          <div class="specials-content">
+            <div>
+              <i class="las la-user-shield"></i>
               <h3>Insurance</h3>
-              <p>
-                Predictive modeling for sales agents attrition, data
-                infrastructure revamps, and business intelligence
-                transformations
-              </p>
             </div>
+            <p>
+              Predictive modeling for sales agents attrition, data
+              infrastructure revamps, and business intelligence
+              transformations
+            </p>
           </div>
-          <div class="industry">
-            <i class="las la-stethoscope"></i>
-            <div class="special-content">
+          <div class="specials-content">
+            <div>
+              <i class="las la-stethoscope"></i>
               <h3>Healthcare</h3>
-              <p>
-                Data governance program strategy for improving data quality
-                and organizational data competencies for hospital systems
-              </p>
             </div>
+            <p>
+              Data governance program strategy for improving data quality
+              and organizational data competencies for hospital systems
+            </p>
           </div>
         </div>
       </div>
@@ -157,31 +198,71 @@
         I consider myself advanced with the following technologies:
       </h2>
       <ul class="skills-list">
-        <li><img src="img/tech/python.png" alt="Python" /></li>
-        <li><img src="img/tech/pandas.png" alt="Pandas" class="land" /></li>
-        <li><img src="img/tech/r.png" alt="R" class="land" /></li>
-        <li><img src="img/tech/shiny.png" alt="RShiny" /></li>
-        <li><img src="img/tech/postgres.png" alt="Postgres" /></li>
-        <li><img src="img/tech/presto.png" alt="Presto" /></li>
-        <li><img src="img/tech/looker.png" alt="Looker" class="land" /></li>
-        <li><img src="img/tech/ms-sql.png" alt="MS" class="land" /></li>
+        <li>
+          <div><img src="img/tech/python.png" alt="Python" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/pandas.png" alt="Pandas" class="land" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/r.png" alt="R" class="land" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/shiny.png" alt="RShiny" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/postgres.png" alt="Postgres" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/presto.png" alt="Presto" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/looker.png" alt="Looker" class="land" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/ms-sql.png" alt="MS" class="land" /></div>
+        </li>
       </ul>
       <h2 class="section-title">
         I am also familiar with these:
       </h2>
       <ul class="skills-list">
-        <li><img src="img/tech/javascript.png" alt="JS" /></li>
-        <li><img src="img/tech/html.png" alt="HTML" /></li>
-        <li><img src="img/tech/css.png" alt="CSS" /></li>
-        <li><img src="img/tech/sass.png" alt="Sass" /></li>
-        <li><img src="img/tech/react.png" alt="React" /></li>
-        <li><img src="img/tech/ruby.png" alt="Ruby" /></li>
-        <li><img src="img/tech/c-plus.png" alt="C++" /></li>
-        <li><img src="img/tech/power-bi.png" alt="PowerBI" /></li>
-        <li><img src="img/tech/tableau.png" alt="Tableau" /></li>
-        <li><img src="img/tech/jenkins.png" alt="Jenkins" /></li>
-        <li><img src="img/tech/jira.png" alt="Jira" class="land" /></li>
-        <li><img src="img/tech/github.png" alt="Github" /></li>
+        <li>
+          <div><img src="img/tech/javascript.png" alt="JS" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/html.png" alt="HTML" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/css.png" alt="CSS" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/jquery.png" alt="jQuery" class="land" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/sass.png" alt="Sass" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/react.png" alt="React" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/ruby.png" alt="Ruby" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/c-plus.png" alt="C++" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/power-bi.png" alt="PowerBI" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/tableau.png" alt="Tableau" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/jenkins.png" alt="Jenkins" /></div>
+        </li>
+        <li>
+          <div><img src="img/tech/jira.png" alt="Jira" class="land" /></div>
+        </li>
       </ul>
     </div>
   </section>
@@ -198,21 +279,18 @@
           <div class="experience-content">
             <h3>Product Manager</h3>
             <h4>Amount | 2019 - Present | Chicago, IL</h4>
-            <p>
-              A fintech SaaS technology company carve out of the fintech
-              leader Avant, Amount helps financial institutions modernize
-              retail banking through a modern API framework which streamlines
-              workflows and automates account originations across all products
-              and channels.
-            </p>
-            <p>
-              Product manager for the originations platform which serves as
-              the foundation on which our partners can configure highly
-              customized solutions for best-in-class personal loan, credit
-              card, and other digital credit product experiences. My work
-              spans products that help our customers increase their funnel,
-              control risk, and integrate with other technology services.
-            </p>
+            <div>
+              <p>
+                A fintech SaaS technology company carve out of the fintech
+                leader Avant, Amount helps financial institutions representing over 25 million customers and $1T in assets (in total) modernize
+                retail banking through a modern API framework which streamlines
+                workflows and automates account originations across all products
+                and channels. With Amount, partners can go live with new digital products in months instead of years.
+              </p>
+              <p>
+                Product manager for our customer account-opening Application product which serves as the foundation on which our partners can configure highly customized solutions for best-in-class personal loan, credit card, and other digital credit product experiences. My work spans solutions that help our customers increase their funnel, track customer conversions, control risk, and integrate with other technology services.
+              </p>
+            </div>
           </div>
         </div>
         <div class="experience">
@@ -220,18 +298,20 @@
           <div class="experience-content">
             <h3>Senior Associate, Data</h3>
             <h4>Avant | 2017 - 2019 | Chicago, IL</h4>
-            <p>
-              Avant is the leading provider of credit alternatives to middle
-              income consumers and has served more than 600,000 customers
-              worldwide. Founded in late 2012, Avant has raised over $600
-              million of equity capital and originated over $4 billion of
-              loans on the platform.
-            </p>
-            <p>
-              Product manager for the Data Platform working closely with our
-              Data Engineering team. Ensured the successful data onboarding of
-              Avant with its new bank partnerships.
-            </p>
+            <div>
+              <p>
+                Avant is the leading provider of credit alternatives to middle
+                income consumers and has served more than 600,000 customers
+                worldwide. Founded in late 2012, Avant has raised over $600
+                million of equity capital and originated over $4 billion of
+                loans on the platform.
+              </p>
+              <p>
+                Product manager for the Data Platform working closely with our
+                Data Engineering team. Ensured the successful data onboarding of
+                Avant with its new bank partnerships.
+              </p>
+            </div>
           </div>
         </div>
         <div class="experience">
@@ -239,17 +319,18 @@
           <div class="experience-content">
             <h3>Experienced Consultant, Technology</h3>
             <h4>West Monroe Partners | 2015 - 2017 | Chicago, IL</h4>
-            <p>
-              West Monroe (WMP) is a national consulting firm comprised of
-              more than 1,400 professionals with an uncommon blend of business
-              and deep technology expertise.
-            </p>
-            <p>
-              Consultant within the Technology practice with experience in
-              predictive analytics, data strategy, data engineering, and
-              business intelligence with projects across the insurance,
-              financial services, and healthcare industries.
-            </p>
+            <div>
+              <p>
+                West Monroe (WMP) is a national consulting firm comprised of
+                more than 1,300 professionals specializing in digital transformations for Fortune 500 and mid-sized clients.
+              </p>
+              <p>
+                Consultant within the Technology practice with experience in
+                predictive analytics, data strategy, data engineering, and
+                business intelligence with projects across the insurance,
+                financial services, and healthcare industries.
+              </p>
+            </div>
           </div>
         </div>
         <div class="experience">
@@ -257,14 +338,16 @@
           <div class="experience-content">
             <h3>Northwestern University</h3>
             <h4>B.A. Economics | 2011 - 2015 | Evanston, IL</h4>
-            <p>Affiliations:</p>
-            <ul>
-              <li>
-                - Institute for Student Business Education (ISBE) Director
-              </li>
-              <li>- China Care Foundation - NU Chapter President</li>
-              <li>- Chinese Students Association</li>
-            </ul>
+            <div>
+              <p>Affiliations:</p>
+              <ul>
+                <li>
+                  - Institute for Student Business Education (ISBE) Director
+                </li>
+                <li>- China Care Foundation - NU Chapter President</li>
+                <li>- Chinese Students Association</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
