@@ -175,7 +175,7 @@ $(document).ready(function () {
         ? revealChildrenSlow("#about-intro")
         : null;
 
-      isElementInView(".functions > .specials-content > div:first-child")
+      isElementInView(".functions > .specials-content > div:first")
         ? [".functions", ".industries"].forEach(revealChildrenSlow)
         : null;
 
