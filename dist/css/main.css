@@ -359,6 +359,14 @@ img {
       -webkit-box-shadow: 2px 2px 5px 0px #202020;
       -moz-box-shadow: 2px 2px 5px 0px #202020;
       box-shadow: 2px 2px 5px 0px #202020; }
+      #main-nav .logo .circle-headshot a {
+        width: 56px;
+        height: 56px;
+        display: block; }
+        #main-nav .logo .circle-headshot a:focus {
+          outline: 0; }
+        #main-nav .logo .circle-headshot a:hover {
+          border: 0; }
   #main-nav ul {
     display: flex; }
   #main-nav li {

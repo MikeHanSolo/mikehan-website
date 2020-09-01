@@ -68,6 +68,20 @@ img {
       -webkit-box-shadow: 2px 2px 5px 0px #202020;
       -moz-box-shadow: 2px 2px 5px 0px #202020;
       box-shadow: 2px 2px 5px 0px #202020;
+
+      a {
+        width: 56px;
+        height: 56px;
+        display: block;
+
+        &:focus {
+          outline: 0;
+        }
+
+        &:hover {
+          border: 0;
+        }
+      }
     }
   }
 

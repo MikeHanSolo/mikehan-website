@@ -14,7 +14,7 @@
 <body>
   <nav id="main-nav">
     <div class="logo">
-      <div class="circle-headshot"></div>
+      <div class="circle-headshot"><a href="#header-home"></a></div>
     </div>
     <ul>
       <li><a href="#header-home" class="current">Intro</a></li>
@@ -72,7 +72,7 @@
           I am a
           <span class="txt-type" data-wait="3000" data-words='["Product Manager..", "Data Scientist..", "proud Chicagoan..", "NU Wildcat.."]'></span>
         </p>
-        <a href="#experiences" class="btn-main">To Experience</a>
+        <a href="#experiences" class="btn-main">View Experience</a>
       </div>
       <div id="scroll-indicator">
         <div class="arrows">
@@ -195,7 +195,7 @@
   <section id="skills">
     <div class="container">
       <h2 class="section-title">
-        I consider myself advanced with the following technologies:
+        I am skilled with the following technologies:
       </h2>
       <ul class="skills-list">
         <li>

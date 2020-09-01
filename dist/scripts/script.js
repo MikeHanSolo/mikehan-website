@@ -71,7 +71,7 @@ $(document).ready(function () {
     $(element).removeClass("reveal").addClass("hidden");
   }
 
-  var revealChildrenSlow = applyFnChildren(revealElement, 600);
+  var revealChildrenSlow = applyFnChildren(revealElement, 900);
   var revealChildrenFast = applyFnChildren(revealElement, 300);
   var hideChildren = applyFnChildren(hideElement, 0);
 
@@ -170,24 +170,39 @@ $(document).ready(function () {
         transition: "background-color 800ms linear",
       });
 
-      // Fade in once fully scrolled
-      ["#about-intro", ".functions", ".industries"].forEach((element) =>
-        isElementInView(element, 0.7) ? revealChildrenSlow(element) : null
-      );
+      // Fade in sections once triggers are scrolled
+      isElementInView("#about-intro", 0.7)
+        ? revealChildrenSlow("#about-intro")
+        : null;
 
-      [".experiences-list", "#contact > .container"].forEach((element) =>
-        isElementInView(element, 0.6) ? revealChildrenSlow(element) : null
-      );
+      isElementInView(".functions > div:first-child")
+        ? [".functions", ".industries"].forEach(revealChildrenSlow)
+        : null;
 
-      ["#skills > .container > .skills-list"].forEach((element) =>
-        isElementInView(element, 1) ? revealChildrenFast(element) : null
-      );
+      isElementInView("#skills > .container > h2:first-child")
+        ? [
+            "#skills > .container",
+            "#skills > .container > .skills-list",
+          ].forEach(revealChildrenFast)
+        : null;
 
-      ["#experiences", "#skills"].forEach((element) =>
-        isElementInView(element + " > .container > .section-title", 1)
-          ? revealElement(element + " > .container > .section-title")
-          : null
-      );
+      isElementInView("#skills > .container > h2:first-child")
+        ? [
+            "#skills > .container",
+            "#skills > .container > .skills-list",
+          ].forEach(revealChildrenFast)
+        : null;
+
+      isElementInView("#experiences > .container > h2:first-child")
+        ? [
+            "#experiences > .container",
+            "#experiences > .container > .experiences-list",
+          ].forEach(revealChildrenSlow)
+        : null;
+
+      isElementInView("#contact > .container > h2:first-child")
+        ? revealChildrenSlow("#contact > .container")
+        : null;
     }
   });
 
@@ -202,6 +217,12 @@ $(document).ready(function () {
       },
       800
     );
+  });
+
+  // Hide responsive menu after click
+  $("#ham-menu-links > li > a").click(function (e) {
+    console.log("click-triggerdd");
+    $(".toggle").click();
   });
 
   // Trigger contact form PHP on button submit
