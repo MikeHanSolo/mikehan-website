@@ -5,8 +5,6 @@ $(document).ready(function () {
   var $mainNav = $("#main-nav");
   var $mainNavLinks = $("#main-nav > ul > li > a");
   var $scrollIndicator = $("#scroll-indicator");
-  var $headerHome = $("#header-home");
-  var $headerContent = $("#header-content");
   var $sections = $($("section").get().reverse());
   // Dictionary of section ids and corresponding navbar links
   var sectionsToNavLinksMap = {};
@@ -118,8 +116,10 @@ $(document).ready(function () {
     }
 
     // Transition from Intro to About section with scroll
-    var headerHeight = $headerHome.outerHeight();
     var $headerBackground = $("#particles-js");
+    var $headerHome = $("#header-home");
+    var $headerContent = $("#header-content");
+    var headerHeight = $headerHome.outerHeight();
     var $aboutIntro = $("#about-intro");
     var $aboutSection = $("#about");
     var calcTop =
@@ -175,7 +175,7 @@ $(document).ready(function () {
         ? revealChildrenSlow("#about-intro")
         : null;
 
-      isElementInView(".functions > div:first-child")
+      isElementInView(".functions > .specials-content > div:first-child")
         ? [".functions", ".industries"].forEach(revealChildrenSlow)
         : null;
 

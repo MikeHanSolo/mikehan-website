@@ -230,7 +230,7 @@ input[class^="btn-"]:hover {
   body #header-content p {
     font-size: 1rem; }
   body #about-intro {
-    padding-bottom: 4rem; }
+    padding-bottom: 2rem; }
   body #about .circle-headshot {
     width: 150px;
     height: 150px; }
