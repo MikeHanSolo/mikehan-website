@@ -271,7 +271,7 @@
   <section id="experiences">
     <div class="container">
       <h2 class="section-title">
-        My journey thus far has lead me to:
+        My journey thus far has led me to:
       </h2>
       <div class="experiences-list">
         <div class="experience">
