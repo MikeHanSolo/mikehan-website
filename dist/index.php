@@ -28,30 +28,23 @@
     <div class="logo">
       <div class="circle-headshot"><a href="#header-home"></a></div>
     </div>
-    <ul>
-      <li><a href="#header-home" class="current">Intro</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experiences">Experience</a></li>
-    </ul>
-    <ul>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="ham-menu-wrap">
+    <div class="menu-wrap">
       <input type="checkbox" class="toggle">
       <div class="hamburger">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <div class="ham-menu">
+      <div id="menu-links-container">
         <div>
-          <div>
-            <ul id="ham-menu-links">
-              <li><a href="#header-home">Intro</a></li>
+          <div class="menu-links">
+            <ul>
+              <li><a href="#header-home" class="current">Intro</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#skills">Skills</a></li>
               <li><a href="#experiences">Experience</a></li>
+            </ul>
+            <ul>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
