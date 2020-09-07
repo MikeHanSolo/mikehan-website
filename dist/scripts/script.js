@@ -3,7 +3,7 @@ $(document).ready(function () {
   var windowHeight =
     window.innerHeight || document.documentElement.clientHeight;
   var $mainNav = $("#main-nav");
-  var $mainNavLinks = $("#main-nav > ul > li > a");
+  var $mainNavLinks = $(".menu-links > ul > li > a");
   var $scrollIndicator = $("#scroll-indicator");
   var $sections = $($("section").get().reverse());
   // Dictionary of section ids and corresponding navbar links
@@ -17,6 +17,37 @@ $(document).ready(function () {
   var $contactForm = $("#contact-form");
   var $contactSubmitBtn = $("#btn-contact-submit");
 
+  // Generic utility functions
+  // 1. Check if element is fully within viewport
+  // 2. Add or remove CSS class based on another element's visibility
+  // 3. Recursively apply class to child elements
+  function toggleClassOnVisibleTrigger(element, trigger, cssClass) {
+    return function () {
+      if ($(trigger).is(":visible")) {
+        $(element).addClass(cssClass);
+      } else {
+        $(element).removeClass(cssClass);
+      }
+    };
+  }
+
+  function applyFnChildren(fn, delayTime = 600) {
+    return function (parent) {
+      var childElements = $(parent).children();
+
+      $(childElements).each(function (index) {
+        var that = this;
+        var t = setTimeout(function () {
+          fn(that);
+        }, delayTime * index);
+      });
+    };
+  }
+
+  // Specific functions
+  // 1. Highlighting the right navbar link based on scrolled section
+  // 2. Apply ham-menu class based on ham button visibility
+  // 3. Reveal/hide children element functions
   function highlightNavLink($sectionList, scrollPosition, navHeight) {
     $sectionList.each(function () {
       // Get current section
@@ -40,6 +71,12 @@ $(document).ready(function () {
     });
   }
 
+  var setMenuStyle = toggleClassOnVisibleTrigger(
+    (element = "#menu-links-container"),
+    (trigger = ".hamburger"),
+    (cssClass = "ham-menu")
+  );
+
   function isElementInView(element, fraction = 1) {
     var bounding = $(element)[0].getBoundingClientRect();
 
@@ -48,18 +85,9 @@ $(document).ready(function () {
       : false;
   }
 
-  function applyFnChildren(fn, delayTime = 600) {
-    return function (parent) {
-      var childElements = $(parent).children();
-
-      $(childElements).each(function (index) {
-        var that = this;
-        var t = setTimeout(function () {
-          fn(that);
-        }, delayTime * index);
-      });
-    };
-  }
+  var revealChildrenSlow = applyFnChildren(revealElement, 700);
+  var revealChildrenFast = applyFnChildren(revealElement, 300);
+  var hideChildren = applyFnChildren(hideElement, 0);
 
   function revealElement(element) {
     $(element).removeClass("hidden").addClass("reveal");
@@ -69,11 +97,9 @@ $(document).ready(function () {
     $(element).removeClass("reveal").addClass("hidden");
   }
 
-  var revealChildrenSlow = applyFnChildren(revealElement, 900);
-  var revealChildrenFast = applyFnChildren(revealElement, 300);
-  var hideChildren = applyFnChildren(hideElement, 0);
-
   // Set initial constants and state
+  // 1. Hide section elements
+  // 2. Pick the appropriate menu style for screen width
   var lastScrollTop = 0;
   [
     "#about-intro",
@@ -89,6 +115,14 @@ $(document).ready(function () {
     "#experiences > .container > .section-title",
   ].forEach(hideElement);
 
+  setMenuStyle();
+
+  // Change elements on scroll
+  // 1. Navigation bar opacity
+  // 2. Highlighting navigation bar links
+  // 3. Scroll arrow on landing page
+  // 4. Transitioning landing page background on scroll
+  // 5. Reveal section elements on trigger points
   $(document).scroll(function () {
     // Vertical position of scrollbar
     var scrollPos = $(window).scrollTop();
@@ -117,11 +151,8 @@ $(document).ready(function () {
 
     // Transition from Intro to About section with scroll
     var $headerBackground = $("#particles-js");
-    var $headerHome = $("#header-home");
     var $headerContent = $("#header-content");
-    var headerHeight = $headerHome.outerHeight();
-    var $aboutIntro = $("#about-intro");
-    var $aboutSection = $("#about");
+    var headerHeight = $("#header-home").outerHeight();
     var calcTop =
       scrollPos < 300
         ? headerHeight * 0.5 - scrollPos / 2
@@ -136,38 +167,23 @@ $(document).ready(function () {
     }
 
     if (scrollPos < 300) {
-      $headerHome.css({
+      $("#header-home, #about-intro, #about").css({
         "background-color": "#264653",
-        transition: "background-color 800ms linear",
       });
       $headerBackground.css({
         position: "fixed",
         "z-index": "1",
       });
-      $aboutIntro.css({
-        "background-color": "#264653",
-      });
-      $aboutSection.css({
-        "background-color": "#264653",
-      });
 
       hideChildren("#about-intro");
     } else {
-      $headerHome.css({
+      $("#header-home, #about-intro, #about").css({
         "background-color": "#2a9d8f",
-        transition: "background-color 800ms linear",
+        transition: "background-color 800ms ease",
       });
       $headerBackground.css({
         position: "relative",
         "z-index": "-1",
-      });
-      $aboutIntro.css({
-        "background-color": "#2a9d8f",
-        transition: "background-color 800ms linear",
-      });
-      $aboutSection.css({
-        "background-color": "#2a9d8f",
-        transition: "background-color 800ms linear",
       });
 
       // Fade in sections once triggers are scrolled
@@ -219,9 +235,11 @@ $(document).ready(function () {
     );
   });
 
+  // Choose menu style based on window width when window resized
+  $(window).resize(setMenuStyle);
+
   // Hide responsive menu after click
-  $("#ham-menu-links > li > a").click(function (e) {
-    console.log("click-triggerdd");
+  $(".menu-links > ul > li > a").click(function (e) {
     $(".toggle").click();
   });
 

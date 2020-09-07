@@ -5,13 +5,10 @@
       padding: 6rem 2rem;
     }
 
-    #main-nav {
-      ul {
-        visibility: hidden;
-      }
-
-      .ham-menu-wrap {
-        visibility: visible;
+    .menu-wrap {
+      .toggle,
+      .hamburger {
+        display: flex;
       }
     }
 
@@ -59,13 +56,10 @@
       padding: 6rem 2rem;
     }
 
-    #main-nav {
-      ul {
-        visibility: hidden;
-      }
-
-      .ham-menu-wrap {
-        visibility: visible;
+    .menu-wrap {
+      .toggle,
+      .hamburger {
+        display: flex;
       }
     }
 

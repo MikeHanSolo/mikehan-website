@@ -1,6 +1,6 @@
 @import "config";
 @import "utilities";
-@import "responsive-menu";
+@import "ham-menu";
 @import "media";
 
 // General styling
@@ -42,8 +42,7 @@ img {
 #main-nav {
   display: flex;
   position: fixed;
-  justify-content: space-between;
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 0;
   width: 100%;
   text-transform: uppercase;
   z-index: 10;
@@ -54,7 +53,8 @@ img {
   }
 
   .logo {
-    padding: 0 1.5rem 0 1.5rem;
+    display: inline-block;
+    padding: 0 1.5rem;
 
     .circle-headshot {
       width: 56px;
@@ -67,12 +67,12 @@ img {
       background-repeat: no-repeat;
       -webkit-box-shadow: 2px 2px 5px 0px #202020;
       -moz-box-shadow: 2px 2px 5px 0px #202020;
+      -o-box-shadow: 2px 2px 5px 0px #202020;
       box-shadow: 2px 2px 5px 0px #202020;
 
       a {
         width: 56px;
         height: 56px;
-        display: block;
 
         &:focus {
           outline: 0;
@@ -85,38 +85,60 @@ img {
     }
   }
 
-  ul {
-    display: flex;
-  }
-
-  li {
-    padding: 1rem 1.5rem;
-  }
-
-  a {
-    color: set-text-color($dark-color);
-    border-bottom: 3px transparent solid;
-    padding-bottom: 0.5rem;
-    transition: border-color 0.5s;
-
-    &:hover {
-      border-color: $accent-color;
+  .menu {
+    &-wrap {
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
     }
 
-    &.current {
-      border-color: $main-color;
+    &-links {
+      display: flex;
+
+      ul {
+        display: flex;
+        justify-content: center;
+
+        &:first-child {
+          width: 100%;
+        }
+      }
+
+      li {
+        padding: 1rem 1.5rem;
+      }
+
+      a {
+        color: set-text-color($dark-color);
+        border-bottom: 3px transparent solid;
+        padding-bottom: 0.5rem;
+        transition: border-color 0.5s;
+
+        &:hover {
+          border-color: $accent-color;
+        }
+
+        &.current {
+          border-color: $main-color;
+        }
+      }
     }
   }
 }
 
 // Header
-
 #header {
   &-home {
     height: 100vh;
     width: 100%;
     color: set-text-color($dark-color);
     background-color: $dark-color;
+    transition: background-color 800ms ease;
+    // Fixes any flickering while changing background
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
   &-content {
@@ -186,6 +208,11 @@ img {
   min-height: 100vh;
   background-color: $medium-color;
   color: set-text-color($medium-color);
+  // Fixes any flickering while changing background
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
 
   display: flex;
   vertical-align: center;
