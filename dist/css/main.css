@@ -347,10 +347,12 @@ img {
       -webkit-box-shadow: 2px 2px 5px 0px #202020;
       -moz-box-shadow: 2px 2px 5px 0px #202020;
       -o-box-shadow: 2px 2px 5px 0px #202020;
-      box-shadow: 2px 2px 5px 0px #202020; }
+      box-shadow: 2px 2px 5px 0px #202020;
+      position: relative; }
       #main-nav .logo .circle-headshot a {
         width: 56px;
-        height: 56px; }
+        height: 56px;
+        position: absolute; }
         #main-nav .logo .circle-headshot a:focus {
           outline: 0; }
         #main-nav .logo .circle-headshot a:hover {
