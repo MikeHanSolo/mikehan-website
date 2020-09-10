@@ -578,15 +578,15 @@ img {
       padding: 0.5rem 1rem; }
 
 #main-footer {
-  height: 8rem;
+  min-height: 8rem;
   background-color: #264653;
   display: flex;
   vertical-align: center; }
   #main-footer .footer-content {
+    padding: 1rem 3rem;
     margin: auto;
     color: #fff;
-    text-align: center;
-    height: 4rem; }
+    text-align: center; }
     #main-footer .footer-content p {
       line-height: 2rem; }
     #main-footer .footer-content .social {
@@ -594,3 +594,11 @@ img {
       #main-footer .footer-content .social .lab {
         color: #fff;
         padding: 0; }
+    #main-footer .footer-content .footnote {
+      font-size: 0.8rem;
+      line-height: 1rem;
+      display: flex;
+      text-align: center; }
+      #main-footer .footer-content .footnote a {
+        text-decoration: underline;
+        color: #fff; }
