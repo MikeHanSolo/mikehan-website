@@ -1,6 +1,23 @@
-#!/bin/sh
-git --work-tree=/var/www/html --git-dir=/var/www/repo.git checkout -f -- dist/
-cd /var/www/html
-yes | cp -rf dist/* .
-rm -r dist
-echo "Prod version updated."
+#!/bin/bash
+PROD="/var/www/mikehan.io/html"
+TEMP="/var/www/mikehan.io/deploy-temp"
+DIST="/var/www/mikehan.io/deploy-temp/dist"
+GIT_DIR="/var/www/mikehan.io/project.git"
+BRANCH="master"
+
+while read oldrev newrev ref
+do
+    if [[ $ref = refs/heads/$BRANCH ]];
+    then
+        # Temporary directory to checkout branch
+        mkdir $TEMP
+        # Check out the branch
+        git --work-tree=$TEMP --git-dir=$GIT_DIR checkout -f 
+        # Remove current prod resources
+        rm -rf $PROD
+        # move contents of $DIST to $PROD
+        mv $DIST $PROD
+        # Remove temporary directory
+        rm -rf $TEMP
+    fi
+done
