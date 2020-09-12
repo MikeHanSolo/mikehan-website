@@ -443,10 +443,13 @@ img {
     }
 
     .footnote {
-      font-size: 0.8rem;
-      line-height: 1rem;
       display: flex;
       text-align: center;
+
+      p {
+        font-size: 0.8rem;
+        line-height: 1rem;
+      }
 
       a {
         text-decoration: underline;
