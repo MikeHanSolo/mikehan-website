@@ -595,10 +595,11 @@ img {
         color: #fff;
         padding: 0; }
     #main-footer .footer-content .footnote {
-      font-size: 0.8rem;
-      line-height: 1rem;
       display: flex;
       text-align: center; }
+      #main-footer .footer-content .footnote p {
+        font-size: 0.8rem;
+        line-height: 1rem; }
       #main-footer .footer-content .footnote a {
         text-decoration: underline;
         color: #fff; }

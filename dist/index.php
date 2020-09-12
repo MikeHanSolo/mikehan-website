@@ -416,9 +416,9 @@
           <i class="lab la-github-square"></i>
         </a>
       </div>
-      <p class="footnote">
-        I have open-sourced this website&nbsp;<a href="https://github.com/MikeHanSolo/mikehan-website">here on GitHub</a>. Feel free to take a look and borrow any elements for inspiration, but please refrain from making a carbon copy :)
-      </p>
+      <span class="footnote">
+        <p>I have open-sourced this website&nbsp;<a href="https://github.com/MikeHanSolo/mikehan-website">here on GitHub</a>. Feel free to take a look and borrow any elements for inspiration, but please refrain from making a carbon copy :)</p>
+      </span>
     </div>
   </footer>
 
