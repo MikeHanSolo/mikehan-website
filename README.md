@@ -7,3 +7,7 @@ Built largely from scratch using HTML, CSS (SASS), JavaScript, and PHP. Most ani
 - [PHPMailer](https://github.com/PHPMailer/PHPMailer) for contact form request to mail server
 - Google reCAPTCHA v2
 - [ICONS8](https://icons8.com/) for icons styling
+
+## To-do List
+- Modals for experience details on mobile
+- Projects gallery
