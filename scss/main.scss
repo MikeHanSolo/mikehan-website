@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: "Daikon-Regular", Helvetica, sans-serif;
+  font-family: $primary-font, Helvetica, sans-serif;
   line-height: 1.6;
   background-color: #fff;
 }
@@ -23,11 +23,11 @@ a {
 h1,
 h2 {
   text-transform: uppercase;
-  font-family: "Daikon-Black";
+  font-family: $heading-font;
 }
 
 h3 {
-  font-family: "Daikon-Black";
+  font-family: $heading-font;
 }
 
 ul {
@@ -154,7 +154,7 @@ img {
       font-size: 7rem;
       line-height: 1.2;
       text-transform: uppercase;
-      font-family: "Daikon-Black";
+      font-family: $heading-font;
       display: block;
 
       div {
@@ -380,7 +380,7 @@ img {
   textarea {
     border-radius: 5px;
     border: 1px $dark-color solid;
-    font-family: "Daikon-Regular";
+    font-family: $primary-font;
 
     &:focus {
       outline: none;
