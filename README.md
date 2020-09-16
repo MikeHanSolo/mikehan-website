@@ -1,5 +1,5 @@
 # Mike Han's Website
-Built largely from scratch using HTML, CSS (SASS), JavaScript, and PHP. Most animations were constructed without the use of external libraries in order to reduce external dependencies
+Built largely from scratch using HTML, CSS (SASS), JavaScript (jQuery), and PHP. Most animations were constructed without the use of external libraries (outside of jQuery) in order to reduce external dependencies
 
 ## Imports
 - jQuery for scroll animations and navigation styling
