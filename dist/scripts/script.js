@@ -14,9 +14,6 @@ $(document).ready(function () {
     sectionsToNavLinksMap[id] = $mainNavLinks.filter("[href=\\#" + id + "]");
   });
 
-  var $contactForm = $("#contact-form");
-  var $contactSubmitBtn = $("#btn-contact-submit");
-
   // Generic utility functions
   // 1. Check if element is fully within viewport
   // 2. Add or remove CSS class based on another element's visibility
@@ -243,33 +240,6 @@ $(document).ready(function () {
     $(".toggle").click();
   });
 
-  // Trigger contact form PHP on button submit
-  $contactForm.submit(function (e) {
-    e.preventDefault();
-    var postData = $contactForm.serialize();
-    $contactSubmitBtn.val("Sending...").prop("disabled", true);
-
-    $.post("private/contactform.php", postData, function (res) {
-      try {
-        var response = JSON.parse(res);
-      } catch (e) {
-        $contactSubmitBtn.val("Error");
-        alert("Server error. Please email hey@mikehan.io directly.");
-      }
-      if (response.success) {
-        $contactSubmitBtn.val("Sent!");
-        $("#contact-form").trigger("reset");
-      } else {
-        $contactSubmitBtn.val("Error");
-      }
-      alert(response.message);
-      grecaptcha.reset();
-    });
-  });
+  // Contact form removed for static hosting compatibility
+  // Users are directed to social media and email links instead
 });
-
-// Remove contact form submit disabled if ReCAPTCHA completed
-// Global scope needed for ReCAPTCHA data-callback
-function enableSubmitBtn() {
-  $("#btn-contact-submit").val("Submit").prop("disabled", false);
-}

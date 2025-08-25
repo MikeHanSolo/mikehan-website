@@ -1,19 +1,18 @@
 {
   "name": "mikehan-website",
   "version": "1.0.0",
-  "description": "About me website",
+  "description": "About me website - Static version for GitHub Spark",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "build": "webpack dist/index.php"
+    "sass": "sass scss/:dist/css/ --watch",
+    "build-css": "sass scss/:dist/css/",
+    "build": "npm run build-css"
   },
   "author": "Mike Han",
   "license": "ISC",
-  "dependencies": {
-    "node-sass": "^4.14.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "webpack": "^4.44.1"
+    "sass": "^1.77.8"
   }
 }
