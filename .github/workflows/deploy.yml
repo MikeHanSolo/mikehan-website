@@ -1,0 +1,52 @@
+name: Deploy to DigitalOcean
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build application
+      run: npm run build
+      
+    - name: Deploy to server
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          cd /var/www/mikehan-website
+          git pull origin main
+          npm ci
+          npm run build
+          sudo systemctl reload nginx
+          
+    - name: Copy files via SCP
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        source: "dist/*"
+        target: "/var/www/html/"
+        strip_components: 1
