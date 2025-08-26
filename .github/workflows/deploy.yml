@@ -26,21 +26,7 @@ jobs:
     - name: Build application
       run: npm run build
       
-    - name: Deploy to server
-      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
-        script: |
-          cd /var/www/mikehan-website
-          git pull origin main
-          npm ci
-          npm run build
-          sudo systemctl reload nginx
-          
-    - name: Copy files via SCP
+    - name: Copy files to server
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       uses: appleboy/scp-action@v0.1.7
       with:
